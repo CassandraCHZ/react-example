@@ -1,6 +1,9 @@
 import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 
+import Banner from "./Banner";
+import HomeProducts from "./HomeProducts";
+
 const Home = () => {
     return (
         <Container fluid>
@@ -9,8 +12,7 @@ const Home = () => {
                     <div class="col text-center">
                         <img
                             className="img-fluid shadow-4"
-                            src="https://miro.medium.com/max/1400/1*5Jv5YAGqu3zL5endb8dtBA.png"
-                            class="d-block w-100"
+                            src="http://www.diamondpearlz.com/wp-content/uploads/2015/12/banner-1.jpg"                            class="d-block w-100"
                             alt="First slide"
                         />
                     </div>
@@ -23,7 +25,7 @@ const Home = () => {
                     <div class="col text-center">
                         <img
                             className="img-fluid shadow-4"
-                            src="https://i0.wp.com/jrgonzalez.es/wp-content/uploads/2021/05/javascript-tips.jpg?ssl=1"
+                            src="https://www.carrepairadelaidesa.com.au/wp-content/uploads/2021/10/Car-Engine-Repair-Replacement-Banner.png"
                             class="d-block w-100"
                             alt="Second slide"
                         />
@@ -37,8 +39,7 @@ const Home = () => {
                     <div class="col text-center">
                         <img
                             className="img-fluid shadow-4 "
-                            src="https://serv3.raiolanetworks.es/blog/wp-content/uploads/03-que-es-laravel.jpg"
-                            class="d-block w-100"
+                            src="https://pbs.twimg.com/media/FAB56EBVUBAvYBb.png"                            class="d-block w-100"
                             alt="Third slide"
                         />
                     </div>
@@ -51,8 +52,7 @@ const Home = () => {
                     <div class="col text-center">
                         <img
                             className="img-fluid shadow-4"
-                            src="https://blog.knoldus.com/wp-content/uploads/2020/08/git.png"
-                            class="d-block w-100"
+                            src="https://pngimg.com/uploads/electric_car/electric_car_PNG53.png"                            class="d-block w-100"
                             alt="Fourth slide"
                         />
                     </div>
@@ -65,14 +65,7 @@ const Home = () => {
 
             <div>
                 <br></br>
-                <h2 style={{ textAlign: "center" }}><b>Acerca de...</b></h2>
-                <br></br>
-                <h4 style={{ textAlign: "center" }}>Somos el e-commerce "AbarrotesCF", nosotros nos encargamos de que tus tiendas de abarrotes tengan la tecnología
-                    adecuada para poder tener todo organizado. Entre algunas de las funciones con las que cuenta esta
-                    aplicación son: lecturas de los productos y los empleados, altas de empleados y productos, y
-                    actualizaciones de diferentes campos de los productos y empleados, y mucho más.
-                </h4>
-                <br></br>
+                
                 <h2 style={{ textAlign: "center" }}><b>Desarrolladores Web:</b>
                 </h2>
                 <h4 style={{ textAlign: "center" }}>Gutiérrez Hernández Luis Fernando
@@ -81,6 +74,8 @@ const Home = () => {
                 </h4>
                 <br></br>
             </div>
+            <HomeProducts></HomeProducts>
+            <Banner></Banner>
         </Container>
     );
 
