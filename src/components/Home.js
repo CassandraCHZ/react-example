@@ -46,9 +46,6 @@ const Home = () => {
                             alt="Third slide"
                         />
                     </div>
-                    <Carousel.Caption>
-                        <h3 style={{ textAlign: "center", backgroundColor: "rgba(0,0,0, .3)", backdropFilter: "blur(10px)" }}>CUIDANDO EL PLANETA</h3>
-                    </Carousel.Caption>
                 </Carousel.Item>
 
             </Carousel>
