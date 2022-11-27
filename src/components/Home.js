@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel, Container } from 'react-bootstrap';
 
-import Banner from "./Banner";
+import Footer from "./Footer";
 import HomeProducts from "./HomeProducts";
 
 const Home = () => {
@@ -75,7 +75,7 @@ const Home = () => {
                 <br></br>
             </div>
             <HomeProducts></HomeProducts>
-            <Banner></Banner>
+            <Footer></Footer>
         </Container>
     );
 
