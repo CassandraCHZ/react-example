@@ -80,7 +80,6 @@ const Footer = () => {
                     </ul>
                 </div>
 
-
                 <br></br>
             </footer>
         </Container >
