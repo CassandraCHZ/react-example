@@ -12,7 +12,7 @@ function App() {
     <div className='App'>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/react-example" element={<Navigation />} >
+                    <Route path="/react-example" component={App}element={<Navigation />} >
                         <Route index element={<Home/>} />
                         <Route path="Home"  element={<Home/>} />
                         <Route path="Login"  element={<Login/>} />
