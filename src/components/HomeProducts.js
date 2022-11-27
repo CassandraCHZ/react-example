@@ -101,8 +101,11 @@ const HomeProducts = () => {
 
                 <div class="col">
                     <div class="card border-info mb-3 card text-center">
-                        <img src="https://www.ccarprice.com/products/Audi_RS3_Sedan_performance_2023.jpg" title="Sedan"
-                            class="card-img-top" alt="Sedan" />
+                        <img
+                            src="https://www.ccarprice.com/products/Audi_RS3_Sedan_performance_2023.jpg"
+                            title="Sedan"
+                            class="card-img-top"
+                            alt="Sedan" />
                         <div class="card-body">
                             <h5 class="card-title">Sedán RS3 2023</h5>
                             <p class="card-text">$1,080,000</p>
@@ -115,7 +118,9 @@ const HomeProducts = () => {
                     <div class="card border-info mb-3 card text-center">
                         <img
                             src="https://www.chevrolet.com.mx/content/dam/chevrolet/na/mx/es/index/performance/2022-camaro-coupe/colorizer/jellys/01-images/black.jpg?imwidth=960"
-                            title="Camaro-Coupé" class="card-img-top" alt="Camaro-Coupé" />
+                            title="Camaro-Coupé"
+                            class="card-img-top"
+                            alt="Camaro-Coupé" />
                         <div class="card-body">
                             <h5 class="card-title">Camaro Coupé</h5>
                             <p class="card-text">$1,620,000</p>
@@ -128,7 +133,9 @@ const HomeProducts = () => {
                     <div class="card border-info mb-3 card text-center">
                         <img
                             src="https://cdn-api.toyotacr.com/toyotacr_website/uploads/gallery/497791481172c816f974da2c55a47c1dee2bb6a7.png"
-                            title="Toyota-Fortuner" class="card-img-top" alt="Toyota-Fortuner" />
+                            title="Toyota-Fortuner"
+                            class="card-img-top"
+                            alt="Toyota-Fortuner" />
                         <div class="card-body">
                             <h5 class="card-title">Toyota Fortuner</h5>
                             <p class="card-text">$800,000</p>
@@ -140,8 +147,11 @@ const HomeProducts = () => {
 
                 <div class="col">
                     <div class="card border-info mb-3 card text-center">
-                        <img src="https://www.toyota.mx/sites/default/files/galeria360/Hilux_Blanco36.jpg" title="Toyota-Hilux"
-                            class="card-img-top" alt="Toyota-Hilux" />
+                        <img
+                            src="https://www.toyota.mx/sites/default/files/galeria360/Hilux_Blanco36.jpg"
+                            title="Toyota-Hilux"
+                            class="card-img-top"
+                            alt="Toyota-Hilux" />
                         <div class="card-body">
                             <h5 class="card-title">Toyota Hilux</h5>
                             <p class="card-text">$980,550</p>

@@ -4,8 +4,8 @@ import { Container } from 'react-bootstrap';
 const Banner = () => {
     return (
         <Container fluid>
-            <h1>Banner</h1>
-        </Container>
+            
+        </Container >
     );
 
 }
