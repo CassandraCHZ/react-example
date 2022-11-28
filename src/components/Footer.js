@@ -69,7 +69,28 @@ const Footer = () => {
                                 title="cookies"
                                 alt="Coookies"
                                 width="35"
-                                height="35" />
+                                height="35" 
+                                />
+                            <a
+                                href="http://www.google.com/intl/es-419/policies/technologies/types/"
+                                title="gmail"
+                                target="_blank"><i
+                                    class="fa fa-google-plus mr-1"></i>Cookies</a>
+
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="list-group" style={{ textAlign: "center" }}>
+                        <li class="list-group-item bg-transparent border-0 p-0 mb-2"
+                            style={{ fontSize: "20" + "px" }}>
+                            <img
+                                src="/react-example/logo192.png"
+                                title="cookies"
+                                alt="Coookies"
+                                width="35"
+                                height="35" 
+                                />
                             <a
                                 href="http://www.google.com/intl/es-419/policies/technologies/types/"
                                 title="gmail"
