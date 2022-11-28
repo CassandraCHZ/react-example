@@ -67,7 +67,7 @@ const Footer = () => {
                             <img
                                 src="./react-example/logo192.png"
                                 title="cookie"
-                                alt="cookie"
+                                alt="cookies"
                                 width="35"
                                 height="35" />
                             <a
