@@ -65,9 +65,9 @@ const Footer = () => {
                         <li class="list-group-item bg-transparent border-0 p-0 mb-2"
                             style={{ fontSize: "20" + "px" }}>
                             <img
-                                src="react-example/logo192.png"
+                                src="logo192.png"
                                 title="cookies"
-                                alt="Cookies"
+                                alt="Coookies"
                                 width="35"
                                 height="35" />
                             <a
