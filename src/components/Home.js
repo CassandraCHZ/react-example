@@ -3,6 +3,7 @@ import { Carousel, Container } from 'react-bootstrap';
 
 import Footer from "./Footer";
 import HomeProducts from "./HomeProducts";
+import Cookies from "./Cookies";
 
 const Home = () => {
     return (
@@ -54,6 +55,7 @@ const Home = () => {
                 <br></br>
             </div>
             <HomeProducts></HomeProducts>
+            <Cookies></Cookies>
             <Footer></Footer>
         </Container>
     );
