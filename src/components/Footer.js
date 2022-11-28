@@ -66,8 +66,8 @@ const Footer = () => {
                             style={{ fontSize: "20" + "px" }}>
                             <img
                                 src="react-example/logo192.png"
-                                title="cookie"
-                                alt="cookies"
+                                title="cookies"
+                                alt="Cookies"
                                 width="35"
                                 height="35" />
                             <a
