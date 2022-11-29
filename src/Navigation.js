@@ -10,8 +10,8 @@ const Navigation = () => {
             <Navbar fixed="top" collapseOnSelect expand="lg" variant="dark" 
             style={{ background: 'linear-gradient(#ebf4fa, #FFFFFF)'  }}>
                 <Container >
-                    <Navbar.Brand as={Link} to="/react-example/Home"><h4 style={{color:"#006655"}} >Bienvenida</h4></Navbar.Brand>
-                    <Navbar.Brand as={Link} to="/react-example/Login"><h4 style={{color:"#006655"}} >Inicio sesión</h4></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/react-example/Home" title="Bienvenida"><h4 style={{color:"#006655"}} >Bienvenida</h4></Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/react-example/Login" title="Inicio sesión"><h4 style={{color:"#006655"}} >Inicio sesión</h4></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 
