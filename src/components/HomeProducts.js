@@ -26,7 +26,8 @@ const HomeProducts = () => {
                                         alt={auto.modelo + ". " + auto.year} />
                                     <div class="card-body">
                                         <h3 class="card-title">{auto.modelo}</h3>
-                                        <h5 class="card-text"><b>{"$" + auto.precio + " mxn"}</b></h5>
+                                        <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
+                                        <h6 class="card-text">{auto.caracteristicas}</h6>
                                         <br />
                                         <a href="index.html" title="ver" class="buttonSeeProducts">Ver producto </a>
                                     </div>
