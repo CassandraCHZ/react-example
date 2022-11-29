@@ -6,6 +6,7 @@ import "../css-components/home-product.css";
 import Autos from "../autos.json";
 
 const HomeProducts = () => {
+    
     return (
         <Container fluid>
             <br/>
@@ -27,7 +28,7 @@ const HomeProducts = () => {
                                     <div class="card-body">
                                         <h3 class="card-title">{auto.modelo}</h3>
                                         <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
-                                        <h6 class="card-text">{auto.caracteristicas}</h6>
+                                        <h6 class="card-text">{auto.colores}</h6>
                                         <br />
                                         <a href="index.html" title="ver" class="buttonSeeProducts">Ver producto </a>
                                     </div>
