@@ -16,6 +16,7 @@ const Home = () => {
                             src="http://www.diamondpearlz.com/wp-content/uploads/2015/12/banner-1.jpg"                            
                             class="d-block w-100"
                             alt="First slide"
+                            title="Carousel1"
                         />
                     </div>
                     <Carousel.Caption>
@@ -30,6 +31,7 @@ const Home = () => {
                             src="https://www.carrepairadelaidesa.com.au/wp-content/uploads/2021/10/Car-Engine-Repair-Replacement-Banner.png"
                             class="d-block w-100"
                             alt="Second slide"
+                            title="Carousel2"
                         />
                     </div>
                     <Carousel.Caption>
@@ -45,6 +47,7 @@ const Home = () => {
                             class="d-block w-100"
                             width={721}
                             alt="Third slide"
+                            title="Carousel2"
                         />
                     </div>
                 </Carousel.Item>
