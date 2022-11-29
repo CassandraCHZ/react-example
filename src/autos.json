@@ -1,25 +1,122 @@
-[{
-    "id":1,
-    "modelo":"Mercedes A3",
-    "year":"2022",
-    "categoria":"Automovil",
-    "descripcion":"El Mercedes Clase A es el compacto por excelencia de la marca alemana. En su cuarta generación nos encontramos con un vehículo con una imagen nueva, moderna y más tecnológica. El Clase A mejora en espacio a bordo y calidad de sus materiales. El diseño del nuevo Clase A es una clara evolución del diseño anterior. Las mismas formas adaptadas con los últimos matices estéticos de la marca, dotando de un gran protagonismo a sus ópticas, que siguen el camino trazado por el nuevo Mercedes CLS.",
-    "caracteristicas":"Longitud: 4,41 m. Altura: 1,44 m. Anchura: 1,99 m.Batalla: 2,72 m.Capacidad mínima del maletero: 355 litros.Capacidad máxima del maletero: 1.195 litros.",
-    "precio":19000,
-    "marca":"",
-    "colores":"",
-    "imagen":"https://drive.google.com/uc?id=1gwt6da6CtaczVQRUVhnDb_DEkRC4zHN6"
-},
-{
-    "id":2,
-    "modelo":"Corolla",
-    "year":"",
-    "categoria":"",
-    "descripcion":"",
-    "caracteristicas":"",
-    "precio":19000,
-    "marca":"",
-    "colores":"",
-    "imagen":""
-},{},{},{},{},{},{},{},{}
+[
+    {
+        "id": 1,
+        "modelo": "Mercedes A3",
+        "year": "2022",
+        "categoria": "Automovil",
+        "descripcion": "El Mercedes Clase A es el compacto por excelencia de la marca alemana. En su cuarta generación nos encontramos con un vehículo con una imagen nueva, moderna y más tecnológica. El Clase A mejora en espacio a bordo y calidad de sus materiales. El diseño del nuevo Clase A es una clara evolución del diseño anterior. Las mismas formas adaptadas con los últimos matices estéticos de la marca, dotando de un gran protagonismo a sus ópticas, que siguen el camino trazado por el nuevo Mercedes CLS.",
+        "caracteristicas": "Longitud: 4,41 m. Altura: 1,44 m. Anchura: 1,99 m.Batalla: 2,72 m.Capacidad mínima del maletero: 355 litros.Capacidad máxima del maletero: 1.195 litros.",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": "https://drive.google.com/uc?id=1gwt6da6CtaczVQRUVhnDb_DEkRC4zHN6"
+    },
+    {
+        "id": 2,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 3,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 4,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 5,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 6,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 7,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 8,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 9,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    },
+    {
+        "id": 10,
+        "modelo": "Corolla",
+        "year": "",
+        "categoria": "",
+        "descripcion": "",
+        "caracteristicas": "",
+        "precio": 19000,
+        "marca": "",
+        "colores": "",
+        "imagen": ""
+    }
 ]
