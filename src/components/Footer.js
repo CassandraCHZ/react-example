@@ -73,6 +73,7 @@ const Footer = () => {
                             <a
                                 href="http://www.google.com/intl/es-419/policies/technologies/types/"
                                 title="gmail"
+                                alt="gmail"
                                 target="_blank"><i
                                     class="fa fa-google-plus mr-1"></i>Cookies</a>
 
