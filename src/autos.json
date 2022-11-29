@@ -7,8 +7,8 @@
         "descripcion": "El Mercedes Clase A es el compacto por excelencia de la marca alemana. En su cuarta generación nos encontramos con un vehículo con una imagen nueva, moderna y más tecnológica. El Clase A mejora en espacio a bordo y calidad de sus materiales. El diseño del nuevo Clase A es una clara evolución del diseño anterior. Las mismas formas adaptadas con los últimos matices estéticos de la marca, dotando de un gran protagonismo a sus ópticas, que siguen el camino trazado por el nuevo Mercedes CLS.",
         "caracteristicas": "Longitud: 4,41 m. Altura: 1,44 m. Anchura: 1,99 m.Batalla: 2,72 m.Capacidad mínima del maletero: 355 litros.Capacidad máxima del maletero: 1.195 litros.",
         "precio": 590000,
-        "marca": "",
-        "colores": "",
+        "marca": "Mercedes",
+        "colores": "Rojo y Blanco",
         "imagen": "https://drive.google.com/uc?id=1gwt6da6CtaczVQRUVhnDb_DEkRC4zHN6"
     },
     {
@@ -21,7 +21,7 @@
         "precio": 19000,
         "marca": "Toyota",
         "colores": "",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1KfSc7n_mUfrvlMPjkyx763j3-psEwn3r"
     },
     {
         "id": 3,
@@ -33,7 +33,7 @@
         "precio": 19000,
         "marca": "Audi",
         "colores": "",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1E2sr507853zFk71mGCC4Pk9sTm7aMI2l"
     },
     {
         "id": 4,
@@ -45,11 +45,11 @@
         "precio": 19000,
         "marca": "Ford",
         "colores": "",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1KH-UffDWyI5gB_3Y_t-o7FZ9R8BbdQNA"
     },
     {
         "id": 5,
-        "modelo": "Mercedes S",
+        "modelo": "Mercedes S63",
         "year": "2022",
         "categoria": "Automovil",
         "descripcion": "",
@@ -57,7 +57,7 @@
         "precio": 19000,
         "marca": "Mercedes",
         "colores": "",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1jTY0smzA5Z4Aje6t3Lh4Ui0H2E6cBiiS"
     },
     {
         "id": 6,
@@ -69,7 +69,7 @@
         "precio": 19000,
         "marca": "Nissan",
         "colores": "Gris",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1kduuV0kdpqe_kKBMCeU2QtCrGCZAU-4T"
     },
     {
         "id": 7,
@@ -81,7 +81,7 @@
         "precio": 19000,
         "marca": "Toyota",
         "colores": "Negro",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1BjPHUXoLS0wXOjZhrYYNpf7Ud8AtJoxo"
     },
     {
         "id": 8,
@@ -93,7 +93,7 @@
         "precio": 19000,
         "marca": "Toyota",
         "colores": "Gris",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1sx9ivkH6Kh0ORXTy-8bn0_7p8a-1zkNM"
     },
     {
         "id": 9,
@@ -105,7 +105,7 @@
         "precio": 19000,
         "marca": "Volkswagen",
         "colores": "Negro",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1K_kpS16wn6ix4UG3DMnVC-5F4-xTHySu"
     },
     {
         "id": 10,
@@ -117,6 +117,6 @@
         "precio": 19000,
         "marca": "Volkswagen",
         "colores": "Gris",
-        "imagen": ""
+        "imagen": "https://drive.google.com/uc?id=1cxMxvyPthFup3QRRygTAcoQf0wZ1TUfi"
     }
 ]
