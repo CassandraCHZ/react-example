@@ -14,7 +14,7 @@ const HomeProducts = () => {
             <br></br>
             <div class="row row-cols-1 row-cols-md-4 g-4">
                 {
-                    Autos.map(auto => {
+                    Autos.autos.map(auto => {
                         return (
                             <div class="col">
                                 <div class="card border-info mb-3 card text-center" >

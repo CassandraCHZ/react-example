@@ -1,4 +1,4 @@
-[
+{"autos":[
     {
         "id": 1,
         "modelo": "Mercedes A3",
@@ -14,7 +14,12 @@
         "precio": 590000,
         "marca": "Mercedes",
         "colores": "Rojo y Blanco.",
-        "imagen": "https://drive.google.com/uc?id=1gwt6da6CtaczVQRUVhnDb_DEkRC4zHN6"
+        "imagen": "https://drive.google.com/uc?id=1gwt6da6CtaczVQRUVhnDb_DEkRC4zHN6",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
+
     },
     {
         "id": 2,
@@ -31,7 +36,11 @@
         "precio": 390000,
         "marca": "Toyota",
         "colores": "Blanco y Gris.",
-        "imagen": "https://drive.google.com/uc?id=1KfSc7n_mUfrvlMPjkyx763j3-psEwn3r"
+        "imagen": "https://drive.google.com/uc?id=1KfSc7n_mUfrvlMPjkyx763j3-psEwn3r",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 3,
@@ -48,7 +57,11 @@
         "colores": "Azul y Negro.",
         "precio": 470000,
         "marca": "Audi",
-        "imagen": "https://drive.google.com/uc?id=1E2sr507853zFk71mGCC4Pk9sTm7aMI2l"
+        "imagen": "https://drive.google.com/uc?id=1E2sr507853zFk71mGCC4Pk9sTm7aMI2l",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 4,
@@ -65,7 +78,11 @@
         "colores": "Amarillo, Azul y Negro.",
         "precio": 400000,
         "marca": "Ford",
-        "imagen": "https://drive.google.com/uc?id=1KH-UffDWyI5gB_3Y_t-o7FZ9R8BbdQNA"
+        "imagen": "https://drive.google.com/uc?id=1KH-UffDWyI5gB_3Y_t-o7FZ9R8BbdQNA",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 5,
@@ -82,7 +99,11 @@
         "colores": "Blanco y Negro.",
         "precio": 500000,
         "marca": "Mercedes",
-        "imagen": "https://drive.google.com/uc?id=1jTY0smzA5Z4Aje6t3Lh4Ui0H2E6cBiiS"
+        "imagen": "https://drive.google.com/uc?id=1jTY0smzA5Z4Aje6t3Lh4Ui0H2E6cBiiS",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 6,
@@ -99,7 +120,11 @@
         "colores": "Gris y Negro.",
         "precio": 290000,
         "marca": "Nissan",
-        "imagen": "https://drive.google.com/uc?id=1kduuV0kdpqe_kKBMCeU2QtCrGCZAU-4T"
+        "imagen": "https://drive.google.com/uc?id=1kduuV0kdpqe_kKBMCeU2QtCrGCZAU-4T",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 7,
@@ -116,7 +141,11 @@
         "colores": "Gris y Negro.",
         "precio": 600000,
         "marca": "Toyota",
-        "imagen": "https://drive.google.com/uc?id=1BjPHUXoLS0wXOjZhrYYNpf7Ud8AtJoxo"
+        "imagen": "https://drive.google.com/uc?id=1BjPHUXoLS0wXOjZhrYYNpf7Ud8AtJoxo",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 8,
@@ -133,7 +162,11 @@
         "colores": "Rojo, Gris y Negro.",
         "precio": 500000,
         "marca": "Toyota",
-        "imagen": "https://drive.google.com/uc?id=1sx9ivkH6Kh0ORXTy-8bn0_7p8a-1zkNM"
+        "imagen": "https://drive.google.com/uc?id=1sx9ivkH6Kh0ORXTy-8bn0_7p8a-1zkNM",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 9,
@@ -150,7 +183,11 @@
         "colores": "Gris y Negro.",
         "precio": 390000,
         "marca": "Volkswagen",
-        "imagen": "https://drive.google.com/uc?id=1K_kpS16wn6ix4UG3DMnVC-5F4-xTHySu"
+        "imagen": "https://drive.google.com/uc?id=1K_kpS16wn6ix4UG3DMnVC-5F4-xTHySu",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     },
     {
         "id": 10,
@@ -167,6 +204,11 @@
         "colores": "Azul, Gris y Negro.",
         "precio": 490000,
         "marca": "Volkswagen",
-        "imagen": "https://drive.google.com/uc?id=1cxMxvyPthFup3QRRygTAcoQf0wZ1TUfi"
+        "imagen": "https://drive.google.com/uc?id=1cxMxvyPthFup3QRRygTAcoQf0wZ1TUfi",
+        "unit_amount":{
+            "currency_code":"USD",
+            "value":"590000.00"
+        }
     }
 ]
+}
