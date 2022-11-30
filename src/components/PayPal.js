@@ -6,8 +6,7 @@ import Autos from "../autos.json";
 export default function PayPal() {
 
     function renderPaypalButton() {
-        paypal
-            .Buttons({
+        paypal.Buttons({
                 createOrder: async () => {
                     try {
                         const response = await axios({
