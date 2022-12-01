@@ -6,6 +6,7 @@ import {BrowserRouter,Route,Routes} from "react-router-dom";
 //components
 import Home from "./components/Home";
 import Login from "./components/Login";
+import Carrito from "./components/Carrito";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
                         <Route index element={<Home/>} />
                         <Route path="Home"  element={<Home/>} />
                         <Route path="Login"  element={<Login/>} />
+                        <Route path="Carrito"  element={<Carrito/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
