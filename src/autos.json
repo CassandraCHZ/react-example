@@ -39,7 +39,7 @@
         "imagen": "https://drive.google.com/uc?id=1KfSc7n_mUfrvlMPjkyx763j3-psEwn3r",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"390000.00"
         }
     },
     {
@@ -60,7 +60,7 @@
         "imagen": "https://drive.google.com/uc?id=1E2sr507853zFk71mGCC4Pk9sTm7aMI2l",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"470000.00"
         }
     },
     {
@@ -76,7 +76,7 @@
         "potencia":"220 Hp.",
         "transmision":"Standard 6 velocidades.",
         "colores": "Amarillo, Azul y Negro.",
-        "precio": 400000,
+        "precio": 590000,
         "marca": "Ford",
         "imagen": "https://drive.google.com/uc?id=1KH-UffDWyI5gB_3Y_t-o7FZ9R8BbdQNA",
         "unit_amount":{
@@ -102,7 +102,7 @@
         "imagen": "https://drive.google.com/uc?id=1jTY0smzA5Z4Aje6t3Lh4Ui0H2E6cBiiS",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"500000.00"
         }
     },
     {
@@ -118,7 +118,7 @@
         "potencia":"150 Hp.",
         "transmision":"Standard 6 velocidades.",
         "colores": "Gris y Negro.",
-        "precio": 290000,
+        "precio": 590000,
         "marca": "Nissan",
         "imagen": "https://drive.google.com/uc?id=1kduuV0kdpqe_kKBMCeU2QtCrGCZAU-4T",
         "unit_amount":{
@@ -144,7 +144,7 @@
         "imagen": "https://drive.google.com/uc?id=1BjPHUXoLS0wXOjZhrYYNpf7Ud8AtJoxo",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"600000.00"
         }
     },
     {
@@ -165,7 +165,7 @@
         "imagen": "https://drive.google.com/uc?id=1sx9ivkH6Kh0ORXTy-8bn0_7p8a-1zkNM",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"500000.00"
         }
     },
     {
@@ -181,12 +181,12 @@
         "potencia":"190 Hp.",
         "transmision":"Standard 6 velocidades.",
         "colores": "Gris y Negro.",
-        "precio": 390000,
+        "precio": 290000,
         "marca": "Volkswagen",
         "imagen": "https://drive.google.com/uc?id=1K_kpS16wn6ix4UG3DMnVC-5F4-xTHySu",
         "unit_amount":{
             "currency_code":"USD",
-            "value":"590000.00"
+            "value":"290000.00"
         }
     },
     {
@@ -202,7 +202,7 @@
         "potencia":"190 Hp.",
         "transmision":"Standard 6 velocidades.",
         "colores": "Azul, Gris y Negro.",
-        "precio": 490000,
+        "precio": 590000,
         "marca": "Volkswagen",
         "imagen": "https://drive.google.com/uc?id=1cxMxvyPthFup3QRRygTAcoQf0wZ1TUfi",
         "unit_amount":{
