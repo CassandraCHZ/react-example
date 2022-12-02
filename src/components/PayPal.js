@@ -1,74 +1,30 @@
-/*
-import React, { useEffect } from "react";
-import axios from "axios";
-import Autos from "../autos.json";
-//https://www.youtube.com/watch?v=p_VS4l14p9A&t=2s
+import React from 'react';
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { Container } from 'react-bootstrap'; import "../css-components/home-product.css";
 
-export default function PayPal() {
+export default function Paypal(props) {
+  return (
+    <Container fluid>
+      <PayPalScriptProvider options={{ "client-id": "test" }}>
+        <PayPalButtons
+          style={{ layout: "horizontal" }}
+          createOrder={(data, actions) => {
+            return actions.order.create({
+              purchase_units: [
+                {
+                  amount: {
+                    value: props.total,
+                  },
+                },
+              ],
+            });
+          }}
+        />;
+      </PayPalScriptProvider>
 
-    function renderPaypalButton() {
-        paypal.Buttons({
-                createOrder: async () => {
-                    try {
-                        const response = await axios({
-                            url: "http://localhost:8000/create-order",
-                            method: "POST",
-                            headers: {
-                                "Content-Type": "application/json"
-                            },
-                            data: Autos
-                        })
-                        return response.data.id
-                    } catch (error) {
-                        console.log(error);
-                    }
-                },
-                onCancel: function (data) {
-                    console.log("Compra cancelada");
-                },
-                onApprove: function (data, actions) {
-                    console.log(data);
-                    return actions.order.capture();
-                },
-            })
-            .render("#paypal-button-container");
-    }
-    useEffect(() => {
-        renderPaypalButton();
-    }, []);
-    return (
-        <div>
-            <div id="paypal-button-container"></div>
-        </div>
-    );
+    </Container>
+  );
 }
-*/
-import React from "react";
-import ReactDOM from "react-dom"
-const PayPalButton = paypal.Buttons.driver("react", { React, ReactDOM });
-
-class YourComponent extends React.Component {
-  createOrder(data, actions) {
-    return actions.order.create({
-      purchase_units: [
-        {
-          amount: {
-            value: "105",
-          },
-        },
-      ],
-    });
+Paypal.defaultProps ={
+  total: '0'
   }
-  onApprove(data, actions) {
-    return actions.order.capture();
-  }
-  render() {
-    return (
-      <PayPalButton
-        createOrder={(data, actions) => this.createOrder(data, actions)}
-        onApprove={(data, actions) => this.onApprove(data, actions)}
-      />
-    );
-  }
-}
-export default YourComponent;
