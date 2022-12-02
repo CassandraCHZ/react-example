@@ -3,15 +3,19 @@ import { Container,Form, Button } from 'react-bootstrap';
 
 const Login = () => {
     //login
-    const [modalLogin, setModalLogin] = useState({
+    const [Login, setLogin] = useState({
         email: '',
         password: '',
         flag: false
     });
+    
     const onChangeLogin = (e) => {
         e.persist();
-        setModalLogin({ ...modalLogin, [e.target.name]: e.target.value });
+        setLogin({ ...Login, [e.target.name]: e.target.value });
     };
+    
+  
+
     return (
         <Container>
             <Form>
@@ -21,20 +25,21 @@ const Login = () => {
                 <br></br>
                 <br></br>
                 <Form.Label><h4>Inicia sesión con tu correo y contraseña</h4></Form.Label>
-                <Form.Group className="mb-3" controlId="modalEmail">
+                <Form.Group className="mb-3" controlId="email">
                     <Form.Label>Correo</Form.Label>
                     <Form.Control
                         required
                         type="email"
+                        minLength={5}
                         placeholder="Ej. Electricar@gmail.com"
                         autoFocus
                         name="email"
-                        value={modalLogin.email}
+                        value={Login.email}
                         onChange={onChangeLogin}
                     />
                 </Form.Group>
                 <br></br>
-                <Form.Group className="mb-3" controlId="modalPassword">
+                <Form.Group className="mb-3" controlId="password">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control
                         required
@@ -43,7 +48,7 @@ const Login = () => {
                         minLength={8}
                         placeholder="Ingresa tu contraseña"
                         name="password"
-                        value={modalLogin.password}
+                        value={Login.password}
                         onChange={onChangeLogin}
                     />
                 </Form.Group>
