@@ -21,7 +21,12 @@ const Login = () => {
         if (e && e.preventDefault()) e.preventDefault();
 
         navigate('/react-example/Home');
+    };
 
+    const clickRegister = (e) => {
+        if (e && e.preventDefault()) e.preventDefault();
+
+        navigate('/react-example/Register');
     };
 
     return (
@@ -38,7 +43,7 @@ const Login = () => {
                         <br></br>
                         <Form.Label><h4>Inicia sesión con tu correo y contraseña</h4></Form.Label>
                         <Form.Group className="mb-3" controlId="email">
-                            <Form.Label>Correo</Form.Label>
+                            <Form.Label style={{ fontSize: '21px' }}>Correo</Form.Label>
                             <Form.Control
                                 required
                                 type="email"
@@ -52,7 +57,7 @@ const Login = () => {
                         </Form.Group>
                         <br></br>
                         <Form.Group className="mb-3" controlId="password">
-                            <Form.Label>Contraseña</Form.Label>
+                            <Form.Label style={{ fontSize: '21px' }}>Contraseña</Form.Label>
                             <Form.Control
                                 required
                                 type="password"
@@ -68,7 +73,7 @@ const Login = () => {
                         <Button className='buttonSeeProducts' type='submit'> Iniciar sesión </Button>
                         <br></br>
                         <br></br>
-                        <Button className='buttonSeeProducts'> No tengo una cuenta </Button>
+                        <Button className='buttonSeeProducts' onClick={clickRegister}> No tengo una cuenta </Button>
                     </Form>
                 </Col>
                 <Col> 
