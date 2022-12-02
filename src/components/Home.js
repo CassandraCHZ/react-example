@@ -61,7 +61,6 @@ const Home = () => {
             <HomeProducts></HomeProducts>
             <Paypal></Paypal>
             <Cookies></Cookies>
-            <Footer></Footer>
         </Container>
     );
 
