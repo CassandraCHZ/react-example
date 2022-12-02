@@ -15,15 +15,12 @@ const Contact = () => {
             <Row style={{ justifyContent: 'left' }} >
                 <Col >
                     <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br>
                     <img
                         width="100%"
                         height="100%"
                         alt='GMAIL'
                         title='GMAIL'
-                        src="/react-example/Images/gmail_animation.gif">
+                        src="/react-example/Images/Contact_image.gif">
                     </img>
                 </Col>
 
