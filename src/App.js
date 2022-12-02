@@ -10,6 +10,7 @@ import ShoppingCart from "./components/ShoppingCart";
 import Administration from "./components/Administration";
 import ProductCard from "./components/ProductCard";
 import Contact from "./components/Contact";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                         <Route path="Administratation"  element={<Administration/>} />
                         <Route path="ProductCard"  element={<ProductCard/>} />
                         <Route path="Contact"  element={<Contact/>} />
+                        <Route path="Register"  element={<Register/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
