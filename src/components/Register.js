@@ -98,7 +98,7 @@ const Register = () => {
                             <Form.Control
                                 required
                                 type="number"
-                                minLength={3}
+                                minLength={8}
                                 placeholder="AAAA-MM-DD"
                                 name="date_birth"
                                 value={Register.date_birth}
@@ -106,7 +106,22 @@ const Register = () => {
                             />
                         </Form.Group>
                         <br></br>
+                        <Form.Group className="mb-3" controlId="address">
+                            <Form.Label style={{ fontSize: '21px' }}>Dirección</Form.Label>
+                            <Form.Control
+                                required
+                                type="text"
+                                minLength={7}
+                                placeholder="Ej. Fray Luis de león #502 Santa Anita"
+                                name="address"
+                                value={Register.address}
+                                onChange={onChangeRegister}
+                            />
+                        </Form.Group>
+                        <br></br>
                         <Button className='buttonSeeProducts' type='submit'> Registrar </Button>
+                        <br></br>
+                        <br></br>
                     </Form>
                 </Col>
                 <Col> 
