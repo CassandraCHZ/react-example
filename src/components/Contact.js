@@ -46,12 +46,13 @@ const Contact = () => {
                         <Form.Group className="mb-3" controlId="mensaje">
                             <Form.Label>Mensaje</Form.Label>
                             <Form.Control
+                             rows="3"
                                 required
-                                type="password"
+                                type="text"
                                 maxLength="250"
                                 minLength={15}
                                 placeholder="Escribe aquí..."
-                                name="password"
+                                name="mensaje"
                                 value={Contacto.mensaje}
                                 onChange={onChange}
                             />
