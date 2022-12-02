@@ -6,8 +6,11 @@ const Register = () => {
     const navigate = useNavigate();
 
     const [Register, setRegister] = useState({
+        name: '',
+        last_name: '',
         email: '',
         password: '',
+        date_birth:'',
         flag: false
     });
 
@@ -36,17 +39,29 @@ const Register = () => {
                         <br></br>
                         <br></br>
                         <Form.Label><h4>Crear una cuenta</h4></Form.Label>
-                        <Form.Group className="mb-3" controlId="password">
-                            <Form.Label style={{ fontSize: '21px' }}></Form.Label>
+                        <Form.Group className="mb-3" controlId="name">
+                            <Form.Label style={{ fontSize: '21px' }}> Nombre</Form.Label>
                             <Form.Control
                                 required
-                                type="password"
-                                maxLength="12"
-                                minLength={8}
-                                placeholder="Ingresa tu contraseña"
-                                name="password"
-                                value={Login.password}
-                                onChange={onChangeLogin}
+                                type="text"
+                                minLength={3}
+                                placeholder="Ingresa tu nombre"
+                                name="name"
+                                value={Register.password}
+                                onChange={onChangeRegister}
+                            />
+                        </Form.Group>
+                        <br></br>
+                        <Form.Group className="mb-3" controlId="last_name">
+                            <Form.Label style={{ fontSize: '21px' }}>Apellidos</Form.Label>
+                            <Form.Control
+                                required
+                                type="text"
+                                minLength={3}
+                                placeholder="Ingresa tus apellidos "
+                                name="last_name"
+                                value={Register.last_name}
+                                onChange={onChangeRegister}
                             />
                         </Form.Group>
                         <br></br>
@@ -73,8 +88,21 @@ const Register = () => {
                                 minLength={8}
                                 placeholder="Ingresa tu contraseña"
                                 name="password"
-                                value={Login.password}
-                                onChange={onChangeLogin}
+                                value={Register.password}
+                                onChange={onChangeRegister}
+                            />
+                        </Form.Group>
+                        <br></br>
+                        <Form.Group className="mb-3" controlId="date_birth">
+                            <Form.Label style={{ fontSize: '21px' }}>Fecha de nacimineto</Form.Label>
+                            <Form.Control
+                                required
+                                type="number"
+                                minLength={3}
+                                placeholder="AAAA-MM-DD"
+                                name="date_birth"
+                                value={Register.date_birth}
+                                onChange={onChangeRegister}
                             />
                         </Form.Group>
                         <br></br>
