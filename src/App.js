@@ -6,9 +6,9 @@ import {BrowserRouter,Route,Routes} from "react-router-dom";
 //components
 import Home from "./components/Home";
 import Login from "./components/Login";
-import Carrito from "./components/Carrito";
-import Administracion from "./components/Administracion";
-import VistaProducto from "./components/VistaProducto";
+import ShoppingCart from "./components/ShoppingCart";
+import Administration from "./components/Administration";
+import ProductCard from "./components/ProductCard";
 
 function App() {
   return (
@@ -19,9 +19,9 @@ function App() {
                         <Route index element={<Home/>} />
                         <Route path="Home"  element={<Home/>} />
                         <Route path="Login"  element={<Login/>} />
-                        <Route path="Carrito"  element={<Carrito/>} />
-                        <Route path="Administración"  element={<Administracion/>} />
-                        <Route path="VistaProducto"  element={<VistaProducto/>} />
+                        <Route path="ShoppingCart"  element={<ShoppingCart/>} />
+                        <Route path="Administratation"  element={<Administration/>} />
+                        <Route path="ProductCard"  element={<ProductCard/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
