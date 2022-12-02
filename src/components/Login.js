@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container,Form } from 'react-bootstrap';
+import { Container,Form, Button } from 'react-bootstrap';
 
 const Login = () => {
     //login
@@ -33,6 +33,7 @@ const Login = () => {
                         onChange={onChangeLogin}
                     />
                 </Form.Group>
+                <br></br>
                 <Form.Group className="mb-3" controlId="modalPassword">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control
@@ -47,6 +48,12 @@ const Login = () => {
                     />
                 </Form.Group>
             </Form>
+            <br></br>
+            <Button className='buttonSeeProducts'> Iniciar sesión </Button>
+            <br></br>
+            <br></br>
+            <Button className='buttonSeeProducts'> No tengo una cuenta </Button>
+
         </Container>
     );
 }
