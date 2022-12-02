@@ -88,4 +88,4 @@ const Footer = () => {
 
 }
 
-export default Foote;
+export default Footer;
