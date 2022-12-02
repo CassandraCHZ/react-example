@@ -9,6 +9,7 @@ import Login from "./components/Login";
 import Carrito from "./components/Carrito";
 import Administracion from "./components/Administracion";
 import VistaProducto from "./components/VistaProducto";
+import Constact from './components/Contact';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                         <Route path="Carrito"  element={<Carrito/>} />
                         <Route path="Administración"  element={<Administracion/>} />
                         <Route path="VistaProducto"  element={<VistaProducto/>} />
+                        <Route path="C"  element={<VistaProducto/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
