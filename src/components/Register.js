@@ -131,7 +131,7 @@ const Register = () => {
                         <br></br>
                         <br></br>
                         <br></br>
-                        <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/User.gif"></img>
+                        <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/Register_Image.gif"></img>
                 </Col>
             </Row>
 
