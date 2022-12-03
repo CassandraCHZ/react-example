@@ -22,7 +22,7 @@ const Register = () => {
     const click = (e) => {
         if (e && e.preventDefault()) e.preventDefault();
 
-        navigate('/react-example/Home');
+        navigate('/react-example/Login');
 
     };
 
@@ -43,6 +43,7 @@ const Register = () => {
                         <br></br>
                         <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/Register.gif" width="100%" height="50%"></img>
                 </Col>
+
                 <Col md="5">
 
                     <Form onSubmit={click}>
