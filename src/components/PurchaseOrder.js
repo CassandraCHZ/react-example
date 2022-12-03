@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col, Modal } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col, Modal, Table } from 'react-bootstrap';
 import MarquePO from './MarquePO';
+import POtable from './POtable';
 
 //style
 import "../css-components/contact-style.css";
@@ -30,42 +31,19 @@ export default function Purchase() {
             <br></br>
             <br></br>
             <Row style={{ justifyContent: 'left' }} >
-                <Col >
+                <Col xs lg={5} >
                     <br></br>
                     <MarquePO></MarquePO>
                 </Col>
-                <Col md={5}>
+                <Col md="auto" lg={7} >
                     <br></br>
                     <br></br>
-                    <h1>Ordenes de Compra</h1>
-                    <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros.
-                        <br />Estamos a tu servicio 24/7.</h5>
-                    <Form onSubmit={sendMessage} style={{ textAlign: "left" }}>
-                        <br></br>
-                        <Form.Label><h4>Escríbenos...</h4></Form.Label>
-                        <br></br>
-                        <Form.Group className="mb-3">
-                            <Form.Label><b>Para:</b></Form.Label>
-                            <Form.Control placeholder="electricar19151653@gmail.com" disabled />
-                        </Form.Group>
+                    <div style={{ textAlign: 'left' }}>
+                        <h1>Ordenes de Compra</h1>
+                        <h5><b>Aquí están tus pedidos desde la creacion de tu cuenta.</b></h5>
+                    </div>
+                    <POtable></POtable>
 
-                        <Form.Group className="mb-3" controlId="mensaje">
-                            <Form.Label><b>Mensaje:</b></Form.Label>
-                            <textarea
-                                required
-                                name="mensaje"
-                                value={Contacto.mensaje}
-                                onChange={onChange}
-                                type="text"
-                                maxLength="250"
-                                minLength={15}
-                                class="text-area-border" rows="5" cols="60"
-                                placeholder="Escribe aquí...">
-                            </textarea>
-                        </Form.Group>
-                        <Button className='buttonSeeProducts' type='submit'><h6>Enviar mensaje</h6>  </Button>
-                        <br></br>
-                    </Form>
                 </Col>
             </Row>
 
@@ -83,6 +61,6 @@ export default function Purchase() {
                 </Modal.Footer>
             </Modal>
 
-        </Container>
+        </Container >
     );
 }

@@ -19,7 +19,7 @@ export default function MarquePO() {
                     height="118" />Electricar</h1>
                 
             </marquee>
-            <marquee behavior="scroll" direction="right" scrollamount="15">
+            <marquee behavior="scroll" direction="right" scrollamount="13">
                 <h3 style={{ color: "#006655" }} >Puntualidad</h3>
             </marquee>
             <marquee style={{ textAlign: "right" }} behavior="scroll" direction="down" scrollamount="3">
