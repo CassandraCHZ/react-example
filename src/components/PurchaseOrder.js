@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col, Modal, Table } from 'react-bootstrap';
-import MarquePO from './MarquePO';
+import POmarque from './POmarque';
 import POtable from './POtable';
 
 //style
@@ -33,7 +33,7 @@ export default function Purchase() {
             <Row style={{ justifyContent: 'left' }} >
                 <Col xs lg={5} >
                     <br></br>
-                    <MarquePO></MarquePO>
+                    <POmarque/>
                 </Col>
                 <Col md="auto" lg={7} >
                     <br></br>
