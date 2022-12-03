@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 
+//style
+import "../css-components/contact-style.css";
+
 const Contact = () => {
     const [Contacto, setContacto] = useState({
         mensaje: ''
@@ -30,36 +33,36 @@ const Contact = () => {
                     <br></br>
                     <br></br>
                     <h1>Contactanos</h1>
-                    <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros cuando gustes.</h5>
+                    <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros.
+                        <br/>Estamos a tu servicio 24/7.</h5>
                     <Form style={{ textAlign: "left" }}>
                         <br></br>
                         <Form.Label><h4>Escríbenos...</h4></Form.Label>
                         <br></br>
                         <Form.Group className="mb-3">
-                            <Form.Label>Para:</Form.Label>
+                            <Form.Label><b>Para:</b></Form.Label>
                             <Form.Control placeholder="electricar19151653@gmail.com" disabled />
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="mensaje">
-                            <Form.Label>Mensaje</Form.Label>
-                            <Form.Control
-                             rows="3"
+                            <Form.Label><b>Mensaje:</b></Form.Label>
+                            <textarea
                                 required
-                                type="text"
-                                maxLength="250"
-                                minLength={15}
-                                placeholder="Escribe aquí..."
                                 name="mensaje"
                                 value={Contacto.mensaje}
                                 onChange={onChange}
-                            />
+                                type="text"
+                                maxLength="250"
+                                minLength={15}
+                                class="text-area-border" rows="5" cols="60"
+                                placeholder="Escribe aquí...">
+                            </textarea>
                         </Form.Group>
-                        <br></br>
                         <Button className='buttonSeeProducts' type='submit'><h6>Enviar mensaje</h6>  </Button>
                         <br></br>
                     </Form>
                 </Col>
-                
+
 
 
             </Row>
