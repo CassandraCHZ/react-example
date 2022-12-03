@@ -29,6 +29,20 @@ const Register = () => {
     return (
         <Container>
             <Row style={{ justifyContent: 'center' }}>
+            <Col> 
+                <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/Register.gif" width="100%" height="50%"></img>
+                </Col>
                 <Col md="5">
 
                     <Form onSubmit={click}>
@@ -47,7 +61,7 @@ const Register = () => {
                                 minLength={3}
                                 placeholder="Ingresa tu nombre"
                                 name="name"
-                                value={Register.password}
+                                value={Register.name}
                                 onChange={onChangeRegister}
                             />
                         </Form.Group>
@@ -58,7 +72,7 @@ const Register = () => {
                                 required
                                 type="text"
                                 minLength={3}
-                                placeholder="Ingresa tus apellidos "
+                                placeholder="Ingresa tus apellidos"
                                 name="last_name"
                                 value={Register.last_name}
                                 onChange={onChangeRegister}
@@ -97,9 +111,9 @@ const Register = () => {
                             <Form.Label style={{ fontSize: '21px' }}>Fecha de nacimineto</Form.Label>
                             <Form.Control
                                 required
-                                type="number"
+                                type="date"
                                 minLength={8}
-                                placeholder="AAAA-MM-DD"
+                                placeholder="DD-MM-AAAA"
                                 name="date_birth"
                                 value={Register.date_birth}
                                 onChange={onChangeRegister}
@@ -124,15 +138,7 @@ const Register = () => {
                         <br></br>
                     </Form>
                 </Col>
-                <Col> 
-                <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/Register_Image.gif"></img>
-                </Col>
+                
             </Row>
 
         </Container>
