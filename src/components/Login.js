@@ -32,8 +32,16 @@ const Login = () => {
     return (
         <Container>
             <Row style={{ justifyContent: 'center' }}>
+                <Col>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/User.gif"></img>
+                </Col>
                 <Col md="5">
-
                     <Form onSubmit={click}>
                         <br></br>
                         <br></br>
@@ -76,15 +84,7 @@ const Login = () => {
                         <Button className='buttonSeeProducts' onClick={clickRegister}> No tengo una cuenta </Button>
                     </Form>
                 </Col>
-                <Col> 
-                <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <br></br>
-                        <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/User.gif"></img>
-                </Col>
+
             </Row>
 
         </Container>
