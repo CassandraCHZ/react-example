@@ -61,7 +61,7 @@ export default function POtable() {
                             }}>{Pedido1.estatus}
                             </div>
                         </td>
-                        <td>Pedido1.factura</td>
+                        <td>{Pedido1.factura}</td>
                         <td><Button onClick={VerDetalles} variant="link" style={{ color: "blue" }}>Detalles</Button></td>
                     </tr>
                     <tr>
@@ -73,25 +73,37 @@ export default function POtable() {
 
                         <td>
                             <div style={{
-                                background: "#14A44D",
+                                background: "#E4A11B",
                                 borderRadius: 5 + "px",
                                 color: "white"
                             }}>{Pedido2.estatus}
                             </div>
                         </td>
-                        <td>Pedido2.factura</td>
+                        <td>{Pedido2.factura}</td>
                         <td><Button onClick={VerDetalles} variant="link" style={{ color: "blue" }}>Detalles</Button></td>
                     </tr>
                 </tbody>
             </Table>
-            <Modal show={showAlert} onHide={alertClose}>
+            <Modal size="lg" show={showAlert} onHide={alertClose}>
                 <Modal.Header closeButton style={{
-                    background: "#a5edff"
+                    background: "#AAB7B8"
                 }} >
-                    <Modal.Title>Detalles del pedido: {Pedido1.codigo}</Modal.Title>
+                    <Modal.Title>Detalles del pedido:  {Pedido1.codigo}</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <h4>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h4>
+                <Modal.Body style={{ background: '#DFE9E9' }}>
+                    <div style={{
+                        background: "white",
+                        color: "white"
+                    }}>
+                        <h5>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h5>
+                    </div>
+                    <div style={{
+                        background: "white",
+                        color: "white"
+                    }}>
+                        <h5>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h5>
+                    </div>
+
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={alertClose}>Cerrar</Button>
