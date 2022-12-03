@@ -14,7 +14,7 @@ const Navigation = () => {
                         <img src="/react-example/Images/carro.png" title="Logo" alt="Logo del proyecto" width="50" height="44" />Electricar
                     </Navbar.Brand>
         
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{borderColor:"#006655"}}/>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Navbar.Brand as={Link} to="/react-example/Login" title="Inicio sesión"><h4 style={{ color: "#006655" }} >Inicio sesión</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/ShoppingCart" title="Carrito"><h4 style={{ color: "#006655" }} >Carrito</h4></Navbar.Brand>
