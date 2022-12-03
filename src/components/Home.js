@@ -4,7 +4,6 @@ import { Carousel, Container } from 'react-bootstrap';
 import Footer from "./Footer";
 import HomeProducts from "./HomeProducts";
 import Cookies from "./Cookies";
-import Paypal from "./PayPal";
 
 const Home = () => {
     return (
@@ -59,7 +58,6 @@ const Home = () => {
                 <br></br>
             </div>
             <HomeProducts></HomeProducts>
-            <Paypal></Paypal>
             <Cookies></Cookies>
             <Footer></Footer>
         </Container>
