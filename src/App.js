@@ -11,6 +11,7 @@ import Administration from "./components/Administration";
 import ProductCard from "./components/ProductCard";
 import Contact from "./components/Contact";
 import Register from "./components/Register";
+import PurchaseOrder from "./components/PurchaseOrder";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                         <Route path="ProductCard"  element={<ProductCard/>} />
                         <Route path="Contact"  element={<Contact/>} />
                         <Route path="Register"  element={<Register/>} />
+                        <Route path="PurchaseOrder"  element={<PurchaseOrder/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
