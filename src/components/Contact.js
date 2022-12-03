@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col,Modal } from 'react-bootstrap';
 
 //style
 import "../css-components/contact-style.css";
@@ -9,10 +9,20 @@ const Contact = () => {
         mensaje: ''
     });
 
+    const [showAlert, setShowAlert] = useState(false);
+    const alertClose = () => setShowAlert(false);
+    const alertShow = () => setShowAlert(true);
+
     const onChange = (e) => {
         e.persist();
         setContacto({ ...Contacto, [e.target.name]: e.target.value });
     };
+
+    const sendMessage=(e)=>{
+        if (e && e.preventDefault()) e.preventDefault();
+        alertShow();
+        Contacto.mensaje="";
+    }
     return (
         <Container>
             <Row style={{ justifyContent: 'left' }} >
@@ -34,8 +44,8 @@ const Contact = () => {
                     <br></br>
                     <h1>Contactanos</h1>
                     <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros.
-                        <br/>Estamos a tu servicio 24/7.</h5>
-                    <Form style={{ textAlign: "left" }}>
+                        <br />Estamos a tu servicio 24/7.</h5>
+                    <Form onSubmit={sendMessage} style={{ textAlign: "left" }}>
                         <br></br>
                         <Form.Label><h4>Escríbenos...</h4></Form.Label>
                         <br></br>
@@ -62,11 +72,21 @@ const Contact = () => {
                         <br></br>
                     </Form>
                 </Col>
-
-
-
             </Row>
 
+            <Modal show={showAlert} onHide={alertClose}>
+        <Modal.Header style={{
+            background:"#a5edff"
+          }} closeButton>
+          <Modal.Title>Mensaje enviado</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h4>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="primary" onClick={alertClose}>Cerrar</Button>
+        </Modal.Footer>
+      </Modal>
 
         </Container>
     );
