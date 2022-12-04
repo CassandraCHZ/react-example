@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Card, Button, CardGroup, Row, Col, Table } from 'react-bootstrap'; import "../css-components/home-product.css";
+import { Container, Card, Button, CardGroup, Row, Col, Table, InputGroup, Form, CloseButton } from 'react-bootstrap'; import "../css-components/home-product.css";
 
 import PayPal from "./PayPal";
 //json file
@@ -12,8 +12,8 @@ function Carrito() {
         carros[0].precio + carros[1].precio + carros[2].precio
     );
 
-    const eliminarP = () => {
-
+    const eliminarP = (index) => {
+        console.log(index)
     }
     return (
         <Container fluid>
@@ -23,10 +23,10 @@ function Carrito() {
             <h1>Carrito de Compras</h1>
             <br />
             <Row>
-                <Col md="auto" lg={7}>
-                    {carros.map(function (producto) {
+                <Col md="auto" lg={8}>
+                    {carros.map((producto,index)=> {
                         return (
-                            <Col md="auto" lg={7}>
+                            <Col>
                                 <div style={{
                                     background: "white",
                                     color: "white",
@@ -36,12 +36,24 @@ function Carrito() {
                                         <tbody>
                                             <tr>
                                                 <td><img
-                                                    width="50%"
-                                                    height="100%"
+                                                    width="220 px"
+                                                    height="120 px"
                                                     src={producto.imagen}
                                                     title="Producto"
                                                     alt="Producto" /></td>
-                                                <td>1</td>
+                                                <td><b>{producto.modelo}
+                                                    <br />{producto.year}
+                                                    <br />${producto.precio} mxn
+                                                </b></td>
+                                                <td>
+                                                    <InputGroup className="mb-3">
+                                                        <Button variant="outline-danger"><b>-</b></Button>
+                                                        <Form.Control class="form-control-sm" style={{ maxWidth: 40 + "px" }}></Form.Control>
+                                                        <Button variant="outline-success" onClick={eliminarP(index)}><b>+</b></Button>
+                                                        <CloseButton variant='black'>
+                                                        </CloseButton>
+                                                    </InputGroup>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </Table>
@@ -52,7 +64,7 @@ function Carrito() {
                     }
                 </Col>
 
-                <Col xs lg={5}>
+                <Col xs lg={4}>
                     <h1>Total a pagar: <br></br>$ {total}.00 mxn</h1>
                     <br></br>
                     <PayPal total={total}></PayPal>
