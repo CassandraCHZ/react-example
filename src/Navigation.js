@@ -18,7 +18,7 @@ const Navigation = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Navbar.Brand as={Link} to="/react-example/Login" title="Inicio sesión"><h4 style={{ color: "#006655" }} >Inicio sesión</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/ShoppingCart" title="Carrito"><h4 style={{ color: "#006655" }} >Carrito</h4></Navbar.Brand>
-                        <Navbar.Brand as={Link} to="/react-example/Administration" title="Administracion"><h4 style={{ color: "#006655" }} >Administración</h4></Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/react-example/AdminLogin" title="Administracion"><h4 style={{ color: "#006655" }} >Administración</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/ProductCard" title="Vista del Producto"><h4 style={{ color: "#006655" }} >Vista de Producto</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/Contact" title="Contacto"><h4 style={{ color: "#006655" }} >Contacto</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/PurchaseOrder" title="Order"><h4 style={{ color: "#006655" }} >Órdenes de Compra</h4></Navbar.Brand>

@@ -22,7 +22,7 @@ export default function Purchase() {
                     <br></br>
                     <br></br>
                     <div style={{ textAlign: 'left' }}>
-                        <h1>Ordenes de Compra</h1>
+                        <h1>Órdenes de Compra</h1>
                         <h5><b>Aquí están tus pedidos desde la creacion de tu cuenta.</b></h5>
                     </div>
                     <POtable></POtable>

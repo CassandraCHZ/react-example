@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Register from "./components/Register";
 import PurchaseOrder from "./components/PurchaseOrder";
 import Catalog from "./components/Catalog";
+import AdminLogin from "./components/AdminLogin";
 
 function App() {
   return (
@@ -24,12 +25,13 @@ function App() {
                         <Route path="Home"  element={<Home/>} />
                         <Route path="Login"  element={<Login/>} />
                         <Route path="ShoppingCart"  element={<ShoppingCart/>} />
-                        <Route path="Administratation"  element={<Administration/>} />
+                        <Route path="Administration"  element={<Administration/>} />
                         <Route path="ProductCard"  element={<ProductCard/>} />
                         <Route path="Contact"  element={<Contact/>} />
                         <Route path="Register"  element={<Register/>} />
                         <Route path="PurchaseOrder"  element={<PurchaseOrder/>} />
                         <Route path="Catalog"  element={<Catalog/>} />
+                        <Route path="AdminLogin"  element={<AdminLogin/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
