@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Modal, Table } from 'react-bootstrap';
+import { Button, Modal, Table, Col, Row } from 'react-bootstrap';
+
 export default function POtable() {
-    const [showAlert, setShowAlert] = useState(false);
+    const [showAlert, setShowAlert] = useState(true);
     const alertClose = () => setShowAlert(false);
     const alertShow = () => setShowAlert(true);
 
@@ -11,24 +12,26 @@ export default function POtable() {
         precio: 590000,
         metodo: "Transferencia",
         estatus: "Entregado",
-        factura: "No",
+        factura: "No"
     })
+
     const [Pedido2, setPedido2] = useState({
         codigo: "AATRYU95",
         fecha: "2022/11/03",
         precio: 590000,
         metodo: "Paypal",
         estatus: "En Proceso",
-        factura: "Sí",
+        factura: "Sí"
     })
 
     const VerDetalles = (e) => {
         if (e && e.preventDefault()) e.preventDefault();
         alertShow();
     }
+
     return (
         <>
-            <Table striped bordered hover variant="ligth"
+            <Table striped bordered hover variant="ligth" 
                 style={{
                     background: "#a5edff",
                     borderColor: "gray"
@@ -93,16 +96,136 @@ export default function POtable() {
                 <Modal.Body style={{ background: '#DFE9E9' }}>
                     <div style={{
                         background: "white",
-                        color: "white"
+                        color: "white",
+                        padding: "12px",
                     }}>
-                        <h5>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h5>
+                        <h5><b>Referencia de pedido {Pedido1.codigo} - efectuado el {Pedido1.fecha}</b></h5>
                     </div>
+
+                    <br></br>
                     <div style={{
                         background: "white",
-                        color: "white"
+                        color: "white",
+                        padding: "12px",
                     }}>
-                        <h5>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h5>
+                        <h5>Paquetería: ESTAFETA</h5>
+                        <h5>Modo de pago: {Pedido1.metodo}</h5>
                     </div>
+
+                    <br></br>
+                    <div style={{
+                        background: "white",
+                        color: "white",
+                        padding: "12px",
+                    }}>
+                        <h5> <b>Siga su pedido paso a paso </b></h5>
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Estatus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{Pedido1.fecha}</td>
+                                    <td>{Pedido1.estatus}</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+
+                    <br></br>
+
+                    <Row>
+                        <Col>
+                            <div style={{
+                                background: "white",
+                                color: "white",
+                                padding: "12px",
+                            }}>
+                                <h5> <b>Dirección de entrega</b></h5>
+                                <h5>Humberto Cuevas</h5>
+                                <h5>Salvador Novo 525</h5>
+                                <h5>20165 Aguascalientes</h5>
+                                <h5>Aguascalientes</h5>
+                                <h5>México</h5>
+                                <h5>4491020947</h5>
+                                <h5>12154521</h5>
+                            </div>
+                        </Col>
+
+                        <Col >
+                            <div style={{
+                                background: "white",
+                                color: "white",
+                                padding: "12px",
+                            }}>
+                                <h5> <b>Dirección de facturación</b></h5>
+                                <h5>Humberto Cuevas</h5>
+                                <h5>Salvador Novo 525</h5>
+                                <h5>20165 Aguascalientes</h5>
+                                <h5>Aguascalientes</h5>
+                                <h5>México</h5>
+                                <h5>4491020947</h5>
+                                <h5>12154521</h5>
+                            </div>
+                        </Col>
+                    </Row>
+
+                    <br></br>
+                    <div style={{
+                        background: "white",
+                        color: "white",
+                        padding: "12px",
+                    }}>
+                        <h5> <b>Producto(s) a comprar</b></h5>
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Cantidad</th>
+                                    <th>Precio Unitario</th>
+                                    <th>Precio Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Mercedes A3</td>
+                                    <td>1</td>
+                                    <td>{Pedido1.precio}</td>
+                                    <td>{Pedido1.precio * 1.16}</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+
+                    <br></br>
+                    <div style={{
+                        background: "white",
+                        color: "white",
+                        padding: "12px",
+                    }}>
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Paquetería</th>
+                                    <th>Peso</th>
+                                    <th>Costo de envío</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{Pedido1.fecha}</td>
+                                    <td>ESTAFETA</td>
+                                    <td>-</td>
+                                    <td>$20.00 MXN</td>
+                                </tr>
+                            </tbody>
+                        </Table>
+                    </div>
+
 
                 </Modal.Body>
                 <Modal.Footer>
