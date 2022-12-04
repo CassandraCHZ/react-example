@@ -62,30 +62,10 @@ export default function Admin() {
                                     </a>
                                 </li>
                                 <li>
-                                    <Link to = "Usuarios">
-                                        Usuarios
+                                    <Link to="Usuarios" >
+                                        <a href="#usuarios" class="nav-link px-0 align-middle">
+                                            <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span></a>
                                     </Link>
-                                    <a href="#usuarios" class="nav-link px-0 align-middle">
-                                        <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span></a>
-                                    <Table striped bordered hover variant="ligth"
-                                        style={{
-                                            background: "#a5edff",
-                                            borderColor: "gray"
-                                        }}>
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Nombre</th>
-                                                <th>Apellidos</th>
-                                                <th>email</th>
-                                                <th>Contraseña</th>
-                                                <th>Fecha de nacimiento</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody style={{ justifyContent: "center" }}>
-
-                                        </tbody>
-                                    </Table>
                                 </li>
                                 <li>
                                     <a href="#productos" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">

@@ -16,6 +16,8 @@ import AdminLogin from "./components/AdminLogin";
 import Administration from "./components/Administration";
 import UserProfile from "./components/UserProfile";
 import Favorites from "./components/Favorites";
+import Usuarios from "./components/Usuarios";
+import Productos from "./components/Productos";
 
 function App() {
   return (
@@ -38,7 +40,6 @@ function App() {
                         <Route path="Administration"  element={<Administration/>} />
                         <Route path="Usuarios"  element={<Usuarios/>} />
                         <Route path="Productos"  element={<Productos/>} />
-                        <Route path="Categorias"  element={<Categorias/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
