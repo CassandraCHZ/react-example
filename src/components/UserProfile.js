@@ -20,27 +20,27 @@ function GridComplexExample() {
       <br></br>
       <br></br>
       <br></br>
-      <img alt='Edit' title='Editar Perfil' src="/react-example/Images/Edit.gif" width="30%" height="30%" ></img>
+      <img alt='Edit' title='Editar Perfil' src="/react-example/Images/Edit.gif" width="20%" height="20%" ></img>
       <br></br>
       <br></br>
 
       <Row className="mb-3 mx-5" >
       <Form.Group as={Col} className="col-md-4" controlId="formGridName">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control placeholder="Nombre" />
+        <Form.Control placeholder="Nombre"  disabled={disable}/>
       </Form.Group>
   
       
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname1">
           <Form.Label>Apellido paterno</Form.Label>
-          <Form.Control placeholder="Apellido" />
+          <Form.Control placeholder="Apellido" disabled={disable} />
         </Form.Group>
      
 
      
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname2">
           <Form.Label>Apellido materno</Form.Label>
-          <Form.Control placeholder="Apellido" />
+          <Form.Control placeholder="Apellido"  disabled={disable}/>
         </Form.Group>
       </Row>
 
@@ -55,16 +55,16 @@ function GridComplexExample() {
 
         <Form.Group as={Col}  className="col-md-4" controlId="formGridPassword">
           <Form.Label>Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña" />
+          <Form.Control type="password" placeholder="Contraseña"  disabled={disable} />
         </Form.Group>
       
       <Form.Group as={Col} className="col-md-4" controlId="formGridAddress">
         <Form.Label>Dirección</Form.Label>
-        <Form.Control placeholder="Nueva Direccón" />
+        <Form.Control placeholder="Nueva Direccón" disabled={disable} />
       </Form.Group>
       </Row>
 
-      <Button className='buttonSeeProducts me-3'   type="submit">
+      <Button className='buttonSeeProducts me-3'  disabled={disable}  type="submit">
         <h6>Editar </h6>
       </Button>
 
