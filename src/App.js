@@ -15,6 +15,7 @@ import Catalog from "./components/Catalog";
 import AdminLogin from "./components/AdminLogin";
 import Administration from "./components/Administration";
 import UserProfile from "./components/UserProfile";
+import Favorites from "./components/Favorites";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
                         <Route path="PurchaseOrder"  element={<PurchaseOrder/>} />
                         <Route path="Catalog"  element={<Catalog/>} />
                         <Route path="UserProfile"  element={<UserProfile/>} />
+                        <Route path="Favorites"  element={<Favorites/>} />
                         <Route path="AdminLogin"  element={<AdminLogin/>} />
                         <Route path="Administration"  element={<Administration/>} />
                     </Route>
