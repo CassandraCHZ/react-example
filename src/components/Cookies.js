@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, CloseButton } from 'react-bootstrap';
 import "../css-components/cookies-style.css";
 import "../css-components/buttons-style.css";
 
@@ -8,8 +8,9 @@ const Cookies = () => {
     const alertClose = () => setShowAlert(false);
     return (
         <Modal show={showAlert} onHide={alertClose} >
-            <Modal.Header closeButton style={{ background: "#303333", color: "#FFFFFF" }}>
+            <Modal.Header style={{ background: "#303333", color: "#FFFFFF" }}>
                 <Modal.Title>Cookies de Electricar </Modal.Title>
+                <CloseButton variant='white'></CloseButton>
             </Modal.Header>
             <Modal.Body style={{ background: "#303333", color: "#FFFFFF" }} >
                 <h6>Usamos cookies propias y de terceros que entre otras cosas recogen datos sobre sus hábitos de navegación para
