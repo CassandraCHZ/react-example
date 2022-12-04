@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button, Modal, Table, Col, Row } from 'react-bootstrap';
 
 export default function POtable() {
-    const [showAlert, setShowAlert] = useState(true);
+    const [showAlert, setShowAlert] = useState(false);
     const alertClose = () => setShowAlert(false);
     const alertShow = () => setShowAlert(true);
 
