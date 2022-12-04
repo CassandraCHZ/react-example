@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Table, Button, Row, Col, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import Autos from "../autos.json";
+import Usuarios from "../usuarios.json";
 //style
 
 export default function Admin() {
 
-    const [productos, setProductos] = useState(
-        Autos.autos
+    const [usuarios, setUsuarios] = useState(
+        Usuarios.usuarios
     )
 
     const [showAlert, setShowAlert] = useState(false);
@@ -19,6 +21,31 @@ export default function Admin() {
         alertShow();
 
     }
+
+    const [Usuario1, setUsuario1] = useState({
+        nombre: "Saúl",
+        apellidos: "Mascorro Luévano",
+        email: "smascorro2001@gmail.com",
+        contraseña: "1dsa483dt4",
+        fechaNacimiento: "23/09/2001",
+    })
+
+    const [Usuario2, setUsuario2] = useState({
+        nombre: "Luis Fernand0",
+        apellidos: "Gutiérrez Hernández",
+        email: "luisGH2001@gmail.com",
+        contraseña: "789dshj9h5g",
+        fechaNacimiento: "01/01/2001",
+    })
+
+    const [Usuario3, setUsuario3] = useState({
+        nombre: "Juan Carlos",
+        apellidos: "Sánchez Gaytán",
+        email: "negocios1@hotmail.com",
+        contraseña: "6hr6w26frwqnmg",
+        fechaNacimiento: "02/02/2002",
+    })
+
     return (
         <Container>
             <div class="container-fluid">
@@ -35,8 +62,30 @@ export default function Admin() {
                                     </a>
                                 </li>
                                 <li>
+                                    <Link to = "Usuarios">
+                                        Usuarios
+                                    </Link>
                                     <a href="#usuarios" class="nav-link px-0 align-middle">
                                         <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span></a>
+                                    <Table striped bordered hover variant="ligth"
+                                        style={{
+                                            background: "#a5edff",
+                                            borderColor: "gray"
+                                        }}>
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Nombre</th>
+                                                <th>Apellidos</th>
+                                                <th>email</th>
+                                                <th>Contraseña</th>
+                                                <th>Fecha de nacimiento</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style={{ justifyContent: "center" }}>
+
+                                        </tbody>
+                                    </Table>
                                 </li>
                                 <li>
                                     <a href="#productos" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
