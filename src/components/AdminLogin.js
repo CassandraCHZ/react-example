@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 
 const Login = () => {
-    //login
+    //loginAdmin
     const navigate = useNavigate();
 
     const [Login, setLogin] = useState({
@@ -20,13 +20,7 @@ const Login = () => {
     const click = (e) => {
         if (e && e.preventDefault()) e.preventDefault();
 
-        navigate('/react-example/Home');
-    };
-
-    const clickRegister = (e) => {
-        if (e && e.preventDefault()) e.preventDefault();
-
-        navigate('/react-example/Register');
+        navigate('/react-example/Administration');
     };
 
     return (
@@ -39,7 +33,7 @@ const Login = () => {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/User.gif"></img>
+                    <img alt='InicioSesion' title='InicioSesion' src="/react-example/Images/AdminLogin.gif" width={490}></img>
                 </Col>
                 <Col md="5">
                     <Form onSubmit={click}>
@@ -49,6 +43,7 @@ const Login = () => {
                         <br></br>
                         <br></br>
                         <br></br>
+                        <Form.Label><h4>Administración</h4></Form.Label>
                         <Form.Label><h4>Inicia sesión con tu correo y contraseña</h4></Form.Label>
                         <Form.Group className="mb-3" controlId="email">
                             <Form.Label style={{ fontSize: '21px' }}>Correo</Form.Label>
@@ -79,9 +74,6 @@ const Login = () => {
                         </Form.Group>
                         <br></br>
                         <Button className='buttonSeeProducts' type='submit'> Iniciar sesión </Button>
-                        <br></br>
-                        <br></br>
-                        <Button className='buttonSeeProducts' onClick={clickRegister}> No tengo una cuenta </Button>
                     </Form>
                 </Col>
 
