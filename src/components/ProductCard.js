@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Container, Form, Button, Row, Col, Number } from 'react-bootstrap';
+import { Container, Form, Button, Row, Col, Toast, ToastContainer } from 'react-bootstrap';
 //json file
 import Autos from "../autos.json";
 
 const ProductCard = () => {
 
-    const navigate = useNavigate();
-
     const [Car, setCar] = useState(
         Autos.autos
     )
 
-    const click = (e) => {
+    
+    const [showToastC, setShowToastC] = useState(false);
+    const toastCloseC = () => setShowToastC(false);
+    const toastShowC = () => setShowToastC(true);
 
-        navigate('/react-example/');
-    };
+    const [showToastF, setShowToastF] = useState(false);
+    const toastCloseF = () => setShowToastF(false);
+    const toastShowF = () => setShowToastF(true);
+
+    const [position, setPosition] = useState('bottom-center');
 
     return (
         <Container>
@@ -54,15 +58,34 @@ const ProductCard = () => {
 
             <div style={{ textAlign: "center" }}>
                 <h4>Cantidad</h4>
-                <input type="number" id="tentacles" name="tentacles" min="1" max="100" style={{padding:"10px", backgroundColor:"#E2EAEA", borderRadius: "10px"}} ></input>
+                <input type="number" id="tentacles" name="tentacles" min="1" max="100" style={{ padding: "10px", backgroundColor: "#E2EAEA", borderRadius: "10px" }} ></input>
                 <br />
                 <br />
 
-                <Button className='buttonSeeProducts'>Añadir al carrito</Button>
-                <img src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }}></img>
+                <Button className='buttonSeeProducts' onClick={toastShowC}>Añadir al carrito</Button>
+                
+                <img src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }} onClick={toastShowF}></img>
             </div>
-            <br/>
-            <br/>
+            <br />
+            <br />
+
+            <ToastContainer className="p-3" position={position}>
+                <Toast show={showToastC} onClose={toastCloseC}>
+                    <Toast.Header>
+                        <strong className="me-auto">Añadir al carrito</strong>
+                    </Toast.Header>
+                    <Toast.Body>Se añadió correctamente tu producto al carrito.</Toast.Body>
+                </Toast>
+            </ToastContainer>
+
+            <ToastContainer className="p-3" position={position}>
+                <Toast show={showToastF} onClose={toastCloseF}>
+                    <Toast.Header>
+                        <strong className="me-auto">Añadir a tu lista de deseos</strong>
+                    </Toast.Header>
+                    <Toast.Body>Se añadió correctamente a tu lista de deseos.</Toast.Body>
+                </Toast>
+            </ToastContainer>
         </Container>
     );
 }
