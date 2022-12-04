@@ -13,6 +13,7 @@ import Contact from "./components/Contact";
 import Register from "./components/Register";
 import PurchaseOrder from "./components/PurchaseOrder";
 import Catalog from "./components/Catalog";
+import AdminLogin from "./components/AdminLogin";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
                         <Route path="Register"  element={<Register/>} />
                         <Route path="PurchaseOrder"  element={<PurchaseOrder/>} />
                         <Route path="Catalog"  element={<Catalog/>} />
+                        <Route path="AdminLogin"  element={<AdminLogin/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
