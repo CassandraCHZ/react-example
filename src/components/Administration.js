@@ -49,14 +49,13 @@ export default function Admin() {
                                     <tr data-index={index}>
                                         <td>{producto.id}</td>
                                         <td>
-                                        <img
-                                    src={producto.imagen}
-                                    title="Logo"
-                                    alt="Logo del Proyecto"
-                                    width="40"
-                                    height="40" />
-                                            
-                                            </td>
+                                            <img
+                                                src={producto.imagen}
+                                                title="Logo"
+                                                alt="Logo del Proyecto"
+                                                width="40"
+                                                height="40" />
+                                        </td>
                                         <td>{producto.modelo}</td>
                                         <td>{producto.year}</td>
                                         <td>{producto.categoria}</td>
