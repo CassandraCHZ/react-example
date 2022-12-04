@@ -33,19 +33,6 @@ function GridComplexExample() {
           <Form.Label>Ciudad</Form.Label>
           <Form.Control />
         </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridState">
-          <Form.Label>State</Form.Label>
-          <Form.Select defaultValue="Choose...">
-            <option>Choose...</option>
-            <option>...</option>
-          </Form.Select>
-        </Form.Group>
-
-        <Form.Group as={Col} controlId="formGridZip">
-          <Form.Label>Zip</Form.Label>
-          <Form.Control />
-        </Form.Group>
       </Row>
 
       <Form.Group className="mb-3" id="formGridCheckbox">
