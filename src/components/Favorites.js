@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
-import Button from 'react-bootstrap';
+import Button from 'react-bootstrap/Button';
 import { Container } from 'react-bootstrap';
 
 function GroupExample() {
