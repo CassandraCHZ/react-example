@@ -10,7 +10,7 @@ const Cookies = () => {
         <Modal show={showAlert} onHide={alertClose} >
             <Modal.Header style={{ background: "#303333", color: "#FFFFFF" }}>
                 <Modal.Title>Cookies de Electricar </Modal.Title>
-                <CloseButton variant='white'></CloseButton>
+                <CloseButton variant='white' onClick={alertClose}  ></CloseButton>
             </Modal.Header>
             <Modal.Body style={{ background: "#303333", color: "#FFFFFF" }} >
                 <h6>Usamos cookies propias y de terceros que entre otras cosas recogen datos sobre sus hábitos de navegación para
