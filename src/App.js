@@ -16,8 +16,8 @@ import AdminLogin from "./components/AdminLogin";
 import Administration from "./components/Administration";
 import UserProfile from "./components/UserProfile";
 import Favorites from "./components/Favorites";
-import Usuarios from "./pages/Usuarios";
-import Productos from "./pages/Productos";
+import Usuario from "./components/Usuario";
+//import Productos from "./Productos";
 
 function App() {
   return (
@@ -38,8 +38,7 @@ function App() {
                         <Route path="Favorites"  element={<Favorites/>} />
                         <Route path="AdminLogin"  element={<AdminLogin/>} />
                         <Route path="Administration"  element={<Administration/>} />
-                        <Route path="Usuarios"  element={<Usuarios/>} />
-                        <Route path="Productos"  element={<Productos/>} />
+                        <Route path="Usuario"  element={<Usuario/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
