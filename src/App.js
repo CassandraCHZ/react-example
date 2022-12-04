@@ -36,6 +36,9 @@ function App() {
                         <Route path="Favorites"  element={<Favorites/>} />
                         <Route path="AdminLogin"  element={<AdminLogin/>} />
                         <Route path="Administration"  element={<Administration/>} />
+                        <Route path="Usuarios"  element={<Usuarios/>} />
+                        <Route path="Productos"  element={<Productos/>} />
+                        <Route path="Categorias"  element={<Categorias/>} />
                     </Route>
                 </Routes>
             </BrowserRouter>
