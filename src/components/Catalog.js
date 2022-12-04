@@ -18,27 +18,28 @@ const HomeProducts = () => {
         <Container fluid>
          
             <br/>
+            <br></br>
+            <br></br>
             <h1 class="text-center">Catálogo</h1>
             <br></br>
            
             <div class="row">
-    <div class="col-md-2">
-    
+  
+    <div class="col-md-6">
     </div>
-    <div class="col-md-2">
-        
-    </div>
-    <div class="col-md-2">
-    <DropdownButton id="dropdown-item-button" title="Categoría"  variant="outline-danger">
+    <div class="col-md-1">
+    <DropdownButton id="dropdown-item-button" title="Categoría" variant="outline-primary">
             <Dropdown.ItemText></Dropdown.ItemText>
-            <Dropdown.Item as="button">Automovil</Dropdown.Item>
+            <Dropdown.Item as="button">Automovol</Dropdown.Item>
             <Dropdown.Item as="button">Camioneta</Dropdown.Item>
             </DropdownButton>
-    
     </div>
-    <div class="col-md-2">
-            <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-info">
+    <div class="col-md-1">
+            <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-primary">
             <Dropdown.ItemText>Relevante</Dropdown.ItemText>
+            <Dropdown.Item as="button">Automovol</Dropdown.Item>
+            <Dropdown.Item as="button">Camioneta</Dropdown.Item>
+          
             <Dropdown.Item as="button">De la A a la Z</Dropdown.Item>
             <Dropdown.Item as="button">Menor precio</Dropdown.Item>
             <Dropdown.Item as="button">Mayor precio </Dropdown.Item>
@@ -87,7 +88,6 @@ const HomeProducts = () => {
                 }
             </div>
             <br></br>
-        
         </Container>
    
     );
