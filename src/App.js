@@ -16,8 +16,8 @@ import AdminLogin from "./components/AdminLogin";
 import Administration from "./components/Administration";
 import UserProfile from "./components/UserProfile";
 import Favorites from "./components/Favorites";
-import Usuarios from "./components/Usuarios";
-import Productos from "./components/Productos";
+import Usuarios from "./pages/Usuarios";
+import Productos from "./pages/Productos";
 
 function App() {
   return (
