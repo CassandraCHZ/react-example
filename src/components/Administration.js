@@ -21,72 +21,53 @@ export default function Admin() {
     }
     return (
         <Container>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Row>
-                <h1>Panel de Administración</h1>
-                <h1>{productos[0].modelo}</h1>
-                <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros.</h5>
-            </Row>
-            <Row style={{ justifyContent: 'left' }} >
-                <Col >
-                    <Table striped bordered hover variant="dark">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>Imagen</th>
-                                <th>Modelo</th>
-                                <th>Año</th>
-                                <th>Categoría</th>
-                                <th>Precio</th>
-                            </tr>
-                        </thead>
-                        <tbody >
-                            {productos.map(function (producto, index) {
-                                return (
-                                    <tr data-index={index}>
-                                        <td>{producto.id}</td>
-                                        <td>
-                                            <img
-                                                src={producto.imagen}
-                                                title="Logo"
-                                                alt="Logo del Proyecto"
-                                                width="40"
-                                                height="40" />
-                                        </td>
-                                        <td>{producto.modelo}</td>
-                                        <td>{producto.year}</td>
-                                        <td>{producto.categoria}</td>
-                                        <td>{producto.precio}</td>
-                                    </tr>
-                                );
-                            })
-                            }
-                        </tbody>
-                    </Table>
-                </Col>
-
-                <Col md={5}>
-
-                </Col>
-            </Row>
-
-            <Modal show={showAlert} onHide={alertClose}>
-                <Modal.Header style={{
-                    background: "#a5edff"
-                }} closeButton>
-                    <Modal.Title>Mensaje enviado</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                    <h4>Agradecemos todos tus comentarios. Responderemos a la mayor brevedad posible.</h4>
-                </Modal.Body>
-                <Modal.Footer>
-                    <Button variant="primary" onClick={alertClose}>Cerrar</Button>
-                </Modal.Footer>
-            </Modal>
-
+            <div class="container-fluid">
+                <div class="row flex-nowrap">
+                    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+                        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                            <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                                <span class="fs-5 d-none d-sm-inline">Electricar</span>
+                            </a>
+                            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link align-middle px-0">
+                                        <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Dashboard menú</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#usuarios" class="nav-link px-0 align-middle">
+                                        <i class="fs-4 bi-table"></i> <span class="ms-1 d-none d-sm-inline">Usuarios</span></a>
+                                </li>
+                                <li>
+                                    <a href="#productos" data-bs-toggle="collapse" class="nav-link px-0 align-middle ">
+                                        <i class="fs-4 bi-bootstrap"></i> <span class="ms-1 d-none d-sm-inline">Productos</span></a>
+                                </li>
+                                <li>
+                                    <a href="#categoria" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                        <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Categorías</span> </a>
+                                    <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu">
+                                        <li class="w-100">
+                                            <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col py-3">
+                        Content area...
+                    </div>
+                </div>
+            </div>
         </Container>
     );
 }
