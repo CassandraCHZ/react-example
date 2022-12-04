@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Container, Button, Row, Col, Toast, ToastContainer, Table, Modal, Form } from 'react-bootstrap';
 //json file
 import Autos from "../autos.json";
 
 const ProductCard = () => {
-
-    const navigate = useNavigate();
     
     const click = (e) => {
         if (e && e.preventDefault()) e.preventDefault();
-
-        navigate('/react-example/ProductCard');
+        modalClose();
     };
 
     const [Car, setCar] = useState(
@@ -32,8 +28,6 @@ const ProductCard = () => {
     const modalClose = () => setShow(false);
     const modalShow = () => setShow(true);
 
- 
-
 
     return (
         <Container>
@@ -49,7 +43,7 @@ const ProductCard = () => {
                     <h2 >{Car[0].modelo} </h2>
                     <h5 style={{ color: "#5664DE" }}>$ {Car[0].precio} MXN</h5>
                     <h5>Precio con IVA: $ {Car[0].precio * 1.16} MXN</h5>
-                    <h5>{Car[0].descripcion}</h5>
+                    <h5 style={{ textAlign: "justify" }}>{Car[0].descripcion}</h5>
                     <h4 style={{ textAlign: "center" }}>Características</h4>
                     <Row>
                         <Col>
@@ -125,7 +119,7 @@ const ProductCard = () => {
                 </Toast>
             </ToastContainer>
 
-            <Modal show={show} onHide={modalClose} >
+            <Modal show={show} onHide={modalClose}>
                 <Modal.Header closeButton>
                     <Modal.Title>Ingresa tu comentario</Modal.Title>
                 </Modal.Header>
