@@ -37,7 +37,7 @@ const HomeProducts = () => {
     <div class="col-md-1">
             <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-primary">
             <Dropdown.ItemText>Relevante</Dropdown.ItemText>
-            <Dropdown.Item as="button">Automovol</Dropdown.Item>
+            <Dropdown.Item as="button">Automovil</Dropdown.Item>
             <Dropdown.Item as="button">Camioneta</Dropdown.Item>
           
             <Dropdown.Item as="button">De la A a la Z</Dropdown.Item>
