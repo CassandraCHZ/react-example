@@ -21,7 +21,8 @@ const Navigation = () => {
                         <Navbar.Brand as={Link} to="/react-example/Administration" title="Administracion"><h4 style={{ color: "#006655" }} >Administración</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/ProductCard" title="Vista del Producto"><h4 style={{ color: "#006655" }} >Vista de Producto</h4></Navbar.Brand>
                         <Navbar.Brand as={Link} to="/react-example/Contact" title="Contacto"><h4 style={{ color: "#006655" }} >Contacto</h4></Navbar.Brand>
-                        <Navbar.Brand as={Link} to="/react-example/PurchaseOrder" title="Order"><h4 style={{ color: "#006655" }} >Ordenes de Compra</h4></Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/react-example/PurchaseOrder" title="Order"><h4 style={{ color: "#006655" }} >Órdenes de Compra</h4></Navbar.Brand>
+                        <Navbar.Brand as={Link} to="/react-example/Catalog" title="Order"><h4 style={{ color: "#006655" }} >Catálogo</h4></Navbar.Brand>
 
                     </Navbar.Collapse>
 
