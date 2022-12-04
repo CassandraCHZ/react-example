@@ -1,0 +1,27 @@
+{"usuarios":[
+    {
+        "id": 1,
+        "nombre": "Saúl",
+        "apellidos": "Mascorro Luévano",
+        "email": "smascorro2001@gmail.com",
+        "contraseña": "1dsa483dt4",
+        "fechaNacimiento": "23/09/2001"
+    },
+    {
+        "id": 2,
+        "nombre": "Luis Fernando",
+        "apellidos": "Gutiérrez Hernández",
+        "email": "luisGH2001@gmail.com",
+        "contraseña": "789dshj9h5g",
+        "fechaNacimiento": "01/01/2001"
+    },
+    {
+        "id": 3,
+        "nombre": "Juan Carlos",
+        "apellidos": "Sánchez Gaytán",
+        "email": "negocios1@hotmail.com",
+        "contraseña": "6hr6w26frwqnmg",
+        "fechaNacimiento": "02/02/2002"
+    }
+]
+}
