@@ -36,6 +36,16 @@ export default function Usuario() {
                         <th>Fecha de Nacimiento</th>
                     </tr>
                 </thead>
+                <tbody style={{ justifyContent: "center" }}>
+                    <tr>
+                        <td>1</td>
+                        <td>{Usuario1.nombre}</td>
+                        <td>{Usuario1.apellidos}</td>
+                        <td>{Usuario1.email}</td>
+                        <td>{Usuario1.contraseña}</td>
+                        <td>{Usuario1.fechaNacimiento}</td>
+                    </tr>
+                </tbody>
            </Table>
         </>
     );
