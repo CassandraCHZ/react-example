@@ -65,7 +65,7 @@ export default function Producto() {
 
     return (
         <>
-            <caption align="center">Autos</caption>
+            <caption align="center">Mercancía</caption>
             <Table striped bordered hover variant="ligth"
                 style={{
                     background: "#a5edff",

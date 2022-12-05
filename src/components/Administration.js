@@ -5,6 +5,7 @@ import Autos from "../autos.json";
 import Usuarios from "../usuarios.json";
 import Usuario from './Usuario';
 import Product from './Product';
+import CarCategory from './CarCategory';
 //style
 
 export default function Administration() {
@@ -27,6 +28,18 @@ export default function Administration() {
            <br></br>
 
            <Product></Product>
+           
+           <br></br>
+           <br></br>
+           <br></br>
+
+           <h4 align="center" color="green">Categorías</h4>
+
+           <CarCategory></CarCategory>
+
+           <br></br>
+           <br></br>
+
            
         </Container>
     );
