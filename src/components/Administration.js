@@ -9,6 +9,17 @@ import Usuario from './Usuario';
 export default function Administration() {
     return (
         <Container>
+           <br></br>
+           <br></br>
+           <br></br>
+           <br></br>
+
+           <h4 align="center" color="green">Dashboard</h4>
+
+           <br></br>
+           <br></br>
+
+           
            
         </Container>
     );
