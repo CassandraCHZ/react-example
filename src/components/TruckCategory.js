@@ -20,7 +20,7 @@ export default function Producto() {
 
     return (
         <>
-            <caption align="center">Caminetones</caption>
+            <caption align="center">Camionetones</caption>
             <Table striped bordered hover variant="ligth"
                 style={{
                     background: "#a5edff",
