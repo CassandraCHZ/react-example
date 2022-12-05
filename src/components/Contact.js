@@ -42,7 +42,7 @@ const Contact = () => {
                     <br></br>
                     <br></br>
                     <br></br>
-                    <h1>Contactanos</h1>
+                    <h1>Contáctanos</h1>
                     <h5>Estimado usuario, dejamos a tu disposición este canal de comunicación, para que puedas comunicarte con nosotros.
                         <br />Estamos a tu servicio 24/7.</h5>
                     <Form onSubmit={sendMessage} style={{ textAlign: "left" }}>
