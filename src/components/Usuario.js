@@ -3,33 +3,40 @@ import { Container, Table, Button, Row, Col, Modal } from 'react-bootstrap';
 
 export default function Usuario() {
 
-    const [Usuario1, setUsuario1] = useState({
-        nombre: "Saúl",
-        apellidos: "Mascorro Luévano",
-        email: "smascorro2001@gmail.com",
-        contraseña: "1dsa483dt4",
-        fechaNacimiento: "23/09/2001"
-    })
+    const [users, setUser] = useState([
+        {
+            id: 1,
+            nombre: "Juan Carlos",
+            apellidos: "Sánchez Gaytán",
+            email: "negocios1@hotmail.com",
+            contraseña: "6hr6w26frwqnmg",
+            fechaNacimiento: "02/02/2002"
+        },
+        {
+            id: 2,
+            nombre: "Luis Fernando",
+            apellidos: "Gutiérrez Hernández",
+            email: "luisGH2001@gmail.com",
+            contraseña: "789dshj9h5g",
+            fechaNacimiento: "01/01/2001"
+        },
+        {
+            id: 3,
+            nombre: "Saúl",
+            apellidos: "Mascorro Luévano",
+            email: "smascorro2001@gmail.com",
+            contraseña: "1dsa483dt4",
+            fechaNacimiento: "23/09/2001",
+            descripcion: "Te presentamos Nuevo Tiguan, el SUVW que reúne todo lo que tú y tu familia necesitan en seguridad, tecnología y entretenimiento para todos los trayectos juntos.",
+        }
+    ]);
 
-    const [Usuario2, setUsuario2] = useState({
-        nombre: "Luis Fernando",
-        apellidos: "Gutiérrez Hernández",
-        email: "luisGH2001@gmail.com",
-        contraseña: "789dshj9h5g",
-        fechaNacimiento: "01/01/2001"
-    })
+    function deleteTest(id){
+        setUser(users.filter(user=>user.id!==id))
+    }
 
-    const [Usuario3, setUsuario3] = useState({
-        nombre: "Juan Carlos",
-        apellidos: "Sánchez Gaytán",
-        email: "negocios1@hotmail.com",
-        contraseña: "6hr6w26frwqnmg",
-        fechaNacimiento: "02/02/2002"
-    })
-
-    function myFunction() {
-        var row = document.getElementById("myRow");
-        row.deleteCell(-1);
+    function editTest(id, datos){
+        setUser(users.map(user=>user.id===id ? datos : user))
     }
 
 
@@ -52,37 +59,21 @@ export default function Usuario() {
                     </tr>
                 </thead>
                 <tbody style={{ justifyContent: "center" }}>
-                    <tr id="fila0">
-                        <td>1</td>
-                        <td>{Usuario1.nombre}</td>
-                        <td>{Usuario1.apellidos}</td>
-                        <td>{Usuario1.email}</td>
-                        <td>{Usuario1.contraseña}</td>
-                        <td>{Usuario1.fechaNacimiento}</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>{Usuario2.nombre}</td>
-                        <td>{Usuario2.apellidos}</td>
-                        <td>{Usuario2.email}</td>
-                        <td>{Usuario2.contraseña}</td>
-                        <td>{Usuario2.fechaNacimiento}</td>
-                        
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>{Usuario3.nombre}</td>
-                        <td>{Usuario3.apellidos}</td>
-                        <td>{Usuario3.email}</td>
-                        <td>{Usuario3.contraseña}</td>
-                        <td>{Usuario3.fechaNacimiento}</td>
-                        
-                    </tr>
+                    {
+                        users.map((user, i) => {
+                            return <tr>
+                                <td>{user.id}</td>
+                                <td>{user.nombre}</td>
+                                <td>{user.apellidos}</td>
+                                <td>{user.email}</td>
+                                <td>{user.contraseña}</td>
+                                <td>{user.fechaNacimiento}</td>
+                                <td><button onClick={() => deleteTest(user.id)}>Eliminar</button></td>
+                            </tr>
+                        })
+                    }
                 </tbody>
             </Table>
-            <br>
-            
-            </br>
         </>
     );
 }
