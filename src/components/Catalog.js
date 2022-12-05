@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import "../css-components/home-product.css";
 import Button from 'react-bootstrap/Button';
@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 //json file
 import Autos from "../autos.json";
 
-const HomeProducts = () => {
+const Catalog = () => {
     const navigate = useNavigate();
 
     const click = (e) => {
@@ -21,6 +21,39 @@ const HomeProducts = () => {
 
         navigate('/react-example/ProductCard');
     };
+
+    const [autosOriginales, setAutosOriginales] = useState(Autos.autos);
+
+    const [autosTodos, setAutosTodos] = useState(Autos.autos);
+
+    const [camionetas, setCamionetas] = useState([Autos.autos[6], Autos.autos[7], Autos.autos[9]] );
+
+    const [automoviles, setAutomoviles] = useState([Autos.autos[0], Autos.autos[1], Autos.autos[2], Autos.autos[3], Autos.autos[4], Autos.autos[5], Autos.autos[8]] );
+
+    const [menorMayorCar, setMenorMayorCar] = useState([Autos.autos[8], Autos.autos[1], Autos.autos[2], Autos.autos[4], Autos.autos[7], Autos.autos[0], Autos.autos[3], Autos.autos[5],Autos.autos[9],Autos.autos[6]], );
+    
+    const [mayorMenorCar, setMayorMenorCar] = useState([Autos.autos[6], Autos.autos[9], Autos.autos[5], Autos.autos[3], Autos.autos[0], Autos.autos[7], Autos.autos[4], Autos.autos[2],Autos.autos[1],Autos.autos[8]], );
+
+
+    const selectMenorMayor=()=>{
+        setAutosOriginales(menorMayorCar);
+    }
+
+    const selectMayorMenor=()=>{
+        setAutosOriginales(mayorMenorCar);
+    }
+
+    const selectTodos=()=>{
+        setAutosOriginales(autosTodos);
+    }
+
+    const selectCamionetas=()=>{
+        setAutosOriginales(camionetas);
+    }
+
+    const selectAutomoviles=()=>{
+        setAutosOriginales(automoviles);
+    }
 
     return (
        
@@ -36,21 +69,14 @@ const HomeProducts = () => {
   
     <div class="col-md-6">
     </div>
-    <div class="col-md-1">
-    <DropdownButton id="dropdown-item-button" title="Categoría" variant="outline-primary">
-            <Dropdown.ItemText></Dropdown.ItemText>
-            <Dropdown.Item as="button">Automovil</Dropdown.Item>
-            <Dropdown.Item as="button">Camioneta</Dropdown.Item>
-            </DropdownButton>
-    </div>
+
     <div class="col-md-1">
             <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-primary">
-            <Dropdown.ItemText>Relevante</Dropdown.ItemText>
-            <Dropdown.Item as="button">De la A a la Z</Dropdown.Item>
-            <Dropdown.Item as="button">Menor precio</Dropdown.Item>
-            <Dropdown.Item as="button">Mayor precio </Dropdown.Item>
-            <Dropdown.Item as="button">Lo más nuevo</Dropdown.Item>
-            <Dropdown.Item as="button">Más vendido </Dropdown.Item>
+            <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
+            <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
+            <Dropdown.Item as="button" onClick= {selectMayorMenor}>Mayor precio </Dropdown.Item>
             </DropdownButton>
     </div>
     <div class="col-md-4">
@@ -70,7 +96,7 @@ const HomeProducts = () => {
             <div class="row row-cols-1 row-cols-md-4 g-4">
        
                 {
-                    Autos.autos.map(auto => {
+                    autosOriginales.map(auto => {
                         return (
                             <div class="col">
                                 <div class="card border-info mb-3 card text-center" >
@@ -99,4 +125,4 @@ const HomeProducts = () => {
     );
 }
 
-export default HomeProducts;
+export default Catalog;
