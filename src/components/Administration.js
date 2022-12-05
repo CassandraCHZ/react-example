@@ -6,6 +6,7 @@ import Usuarios from "../usuarios.json";
 import Usuario from './Usuario';
 import Product from './Product';
 import CarCategory from './CarCategory';
+import TruckCategory from './TruckCategory';
 //style
 
 export default function Administration() {
@@ -40,7 +41,7 @@ export default function Administration() {
            <br></br>
            <br></br>
 
-           
+           <TruckCategory></TruckCategory>
         </Container>
     );
 }
