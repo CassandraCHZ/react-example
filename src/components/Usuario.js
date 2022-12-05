@@ -26,7 +26,13 @@ export default function Usuario() {
         contraseña: "6hr6w26frwqnmg",
         fechaNacimiento: "02/02/2002"
     })
-    
+
+    function myFunction() {
+        var row = document.getElementById("myRow");
+        row.deleteCell(-1);
+    }
+
+
     return (
         <>
             <caption align="center">Usuarios</caption>
@@ -40,8 +46,8 @@ export default function Usuario() {
                         <th>#</th>
                         <th>Nombre</th>
                         <th>Apellidos</th>
-                        <th>email</th>
-                        <th>contraseña</th>
+                        <th>Correo electrónico</th>
+                        <th>Contraseña</th>
                         <th>Fecha de Nacimiento</th>
                     </tr>
                 </thead>
@@ -53,7 +59,6 @@ export default function Usuario() {
                         <td>{Usuario1.email}</td>
                         <td>{Usuario1.contraseña}</td>
                         <td>{Usuario1.fechaNacimiento}</td>
-                        <td><input type="button" class="btn btn-danger" value="Eliminar" /></td>
                     </tr>
                     <tr>
                         <td>2</td>
@@ -62,7 +67,7 @@ export default function Usuario() {
                         <td>{Usuario2.email}</td>
                         <td>{Usuario2.contraseña}</td>
                         <td>{Usuario2.fechaNacimiento}</td>
-                        <td><input onClick="delete()" type="button" class="btn btn-danger" value="Eliminar" /></td>
+                        
                     </tr>
                     <tr>
                         <td>3</td>
@@ -71,15 +76,13 @@ export default function Usuario() {
                         <td>{Usuario3.email}</td>
                         <td>{Usuario3.contraseña}</td>
                         <td>{Usuario3.fechaNacimiento}</td>
-                        <td><input type="button" class="btn btn-danger" value="Eliminar" /></td>
+                        
                     </tr>
                 </tbody>
             </Table>
-            <script>
-                function eliminar() {
-                    
-                }
-            </script>
+            <br>
+            
+            </br>
         </>
     );
 }

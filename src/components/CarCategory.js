@@ -50,7 +50,7 @@ export default function Producto() {
                     <tr>
                         <th>#</th>
                         <th>Modelo</th>
-                        <th>Descripcion</th>
+                        <th>Descripción</th>
                     </tr>
                 </thead>
                 <tbody style={{ justifyContent: "center" }}>

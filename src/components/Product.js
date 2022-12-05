@@ -85,74 +85,74 @@ export default function Producto() {
                         <td>{Producto1.modelo}</td>
                         <td>{Producto1.year}</td>
                         <td>{Producto1.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>{Producto2.modelo}</td>
                         <td>{Producto2.year}</td>
                         <td>{Producto2.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>3</td>
                         <td>{Producto3.modelo}</td>
                         <td>{Producto3.year}</td>
                         <td>{Producto3.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>4</td>
                         <td>{Producto4.modelo}</td>
                         <td>{Producto4.year}</td>
                         <td>{Producto4.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>5</td>
                         <td>{Producto5.modelo}</td>
                         <td>{Producto5.year}</td>
                         <td>{Producto5.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>6</td>
                         <td>{Producto6.modelo}</td>
                         <td>{Producto6.year}</td>
                         <td>{Producto6.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>7</td>
                         <td>{Producto7.modelo}</td>
                         <td>{Producto7.year}</td>
                         <td>{Producto7.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>8</td>
                         <td>{Producto8.modelo}</td>
                         <td>{Producto8.year}</td>
                         <td>{Producto8.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>9</td>
                         <td>{Producto9.modelo}</td>
                         <td>{Producto9.year}</td>
                         <td>{Producto9.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                     <tr>
                         <td>10</td>
                         <td>{Producto10.modelo}</td>
                         <td>{Producto10.year}</td>
                         <td>{Producto10.precio}</td>
-                        <td><input type="button" class="btn btn-info" value="Editar" /></td>
+
                     </tr>
                 </tbody>
             </Table>
-            
+
         </>
     );
 }

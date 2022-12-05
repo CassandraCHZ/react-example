@@ -17,7 +17,7 @@ export default function Administration() {
            <br></br>
            <br></br>
 
-           <h4 align="center" color="green">Dashboard</h4>
+           <h4 align="center">Tablero</h4>
 
            <br></br>
            <br></br>
@@ -34,7 +34,7 @@ export default function Administration() {
            <br></br>
            <br></br>
 
-           <h4 align="center" color="green">Categorías</h4>
+           <h4 align="center">Categorías</h4>
 
            <CarCategory></CarCategory>
 
