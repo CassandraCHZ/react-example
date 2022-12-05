@@ -27,20 +27,20 @@ function GridComplexExample() {
       <Row className="mb-3 mx-5" >
       <Form.Group as={Col} className="col-md-4" controlId="formGridName">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control placeholder="Nombre"  disabled={disable}/>
+        <Form.Control placeholder="Andrea Elizabeth"  disabled={disable}/>
       </Form.Group>
   
       
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname1">
           <Form.Label>Apellido paterno</Form.Label>
-          <Form.Control placeholder="Apellido" disabled={disable} />
+          <Form.Control placeholder="Flores" disabled={disable}/>
         </Form.Group>
      
 
      
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname2">
           <Form.Label>Apellido materno</Form.Label>
-          <Form.Control placeholder="Apellido"  disabled={disable}/>
+          <Form.Control placeholder="Padilla"  disabled={disable}/>
         </Form.Group>
       </Row>
 
@@ -60,10 +60,9 @@ function GridComplexExample() {
       
       <Form.Group as={Col} className="col-md-4" controlId="formGridAddress">
         <Form.Label>Dirección</Form.Label>
-        <Form.Control placeholder="Nueva Direccón" disabled={disable} />
+        <Form.Control placeholder="Mahatma Ghandi" disabled={disable} />
       </Form.Group>
       </Row>
-
       <Button className='buttonSeeProducts me-3'  disabled={disable}  type="submit">
         <h6>Editar </h6>
       </Button>
