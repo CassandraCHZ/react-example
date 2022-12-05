@@ -17,16 +17,20 @@ function Example(props) {
         <>
             <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modificar Camioneta</Modal.Title>
+                    <Modal.Title>Modificar mercancía</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><Form>
                     <Form.Group className="mb-3" controlId="modelo">
                         <Form.Label>Modelo</Form.Label>
                         <Form.Control type="text" placeholder="Modelo" value={valores?.modelo} onChange={(e) => setValores({ ...valores, modelo: e.target.value })} />
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="Descrip">
-                        <Form.Label>Descripción</Form.Label>
-                        <Form.Control type="text" placeholder="Descripción" value={valores?.descripcion} onChange={(e) => setValores({ ...valores, descripcion: e.target.value })} />
+                    <Form.Group className="mb-3" controlId="year">
+                        <Form.Label>Año</Form.Label>
+                        <Form.Control type="text" placeholder="Año" value={valores?.year} onChange={(e) => setValores({ ...valores, year: e.target.value })} />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="Price">
+                        <Form.Label>Precio</Form.Label>
+                        <Form.Control type="text" placeholder="Precio" value={valores?.precio} onChange={(e) => setValores({ ...valores, precio: e.target.value })} />
                     </Form.Group>
                 </Form></Modal.Body>
                 <Modal.Footer>

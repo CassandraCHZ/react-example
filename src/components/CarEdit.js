@@ -17,7 +17,7 @@ function Example(props) {
         <>
             <Modal show={props.show} onHide={props.handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modificar Camioneta</Modal.Title>
+                    <Modal.Title>Modificar Auto</Modal.Title>
                 </Modal.Header>
                 <Modal.Body><Form>
                     <Form.Group className="mb-3" controlId="modelo">

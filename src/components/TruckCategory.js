@@ -27,51 +27,53 @@ export default function Producto() {
         }
     ]);
 
-    function deleteTest(id){
-        setTruck(trucks.filter(truck=>truck.id!==id))
+    function deleteTest(id) {
+        setTruck(trucks.filter(truck => truck.id !== id))
     }
 
-    function editTest(datos){
-        setTruck(trucks.map(truck=>truck.id===datos.id ? datos : truck));
+    function editTest(datos) {
+        setTruck(trucks.map(truck => truck.id === datos.id ? datos : truck));
         handleClose();
     }
 
-    function dataTransfer(datos){
+    function dataTransfer(datos) {
         handleShow();
         setRegistroEdit(datos);
     }
 
-    
+
     return (
         <>
-            <caption align="center">Camionetones</caption>
-            <Table striped bordered hover variant="ligth"
-                style={{
-                    background: "#a5edff",
-                    borderColor: "gray"
-                }}>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Modelo</th>
-                        <th>Descripción</th>
-                    </tr>
-                </thead>
-                <tbody style={{ justifyContent: "center" }}>
-                    {
-                        trucks.map((truck, i) => {
-                            return <tr>
-                                <td>{truck.id}</td>
-                                <td>{truck.modelo}</td>
-                                <td>{truck.descripcion}</td>
-                                <td><button className="btn btn-danger" onClick={()=>deleteTest(truck.id)}>Borrar</button></td>
-                                <td><button className="btn btn-primary" onClick={() => dataTransfer(truck)}>Editar</button></td>
-                            </tr>
-                        })
-                    }
-                </tbody>
-            </Table>
-            <ProductEdit show={show} handleClose={handleClose} editTest={editTest} registroEdit={registroEdit}/>
+            <Container fluid>
+                <caption align="center">Camionetas</caption>
+                <Table striped bordered hover variant="ligth"
+                    style={{
+                        background: "#a5edff",
+                        borderColor: "gray"
+                    }}>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Modelo</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody style={{ justifyContent: "center" }}>
+                        {
+                            trucks.map((truck, i) => {
+                                return <tr>
+                                    <td>{truck.id}</td>
+                                    <td>{truck.modelo}</td>
+                                    <td>{truck.descripcion}</td>
+                                    <td><button className="btn btn-danger" onClick={() => deleteTest(truck.id)}>Borrar</button></td>
+                                    <td><button className="btn btn-primary" onClick={() => dataTransfer(truck)}>Editar</button></td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </Table>
+                <ProductEdit show={show} handleClose={handleClose} editTest={editTest} registroEdit={registroEdit} />
+            </Container>
         </>
     );
 }

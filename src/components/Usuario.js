@@ -37,16 +37,16 @@ export default function Usuario() {
         }
     ]);
 
-    function deleteTest(id){
-        setUser(users.filter(user=>user.id!==id))
+    function deleteTest(id) {
+        setUser(users.filter(user => user.id !== id))
     }
 
-    function editTest(datos){
-        setUser(users.map(user=>user.id===datos.id ? datos : user));
+    function editTest(datos) {
+        setUser(users.map(user => user.id === datos.id ? datos : user));
         handleClose();
     }
 
-    function dataTransfer(datos){
+    function dataTransfer(datos) {
         handleShow();
         setRegistroEdit(datos);
     }
@@ -54,40 +54,42 @@ export default function Usuario() {
 
     return (
         <>
-            <caption align="center">Usuarios</caption>
-            <Table striped bordered hover variant="ligth"
-                style={{
-                    background: "#a5edff",
-                    borderColor: "gray"
-                }}>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Nombre</th>
-                        <th>Apellidos</th>
-                        <th>Correo electrónico</th>
-                        <th>Contraseña</th>
-                        <th>Fecha de Nacimiento</th>
-                    </tr>
-                </thead>
-                <tbody style={{ justifyContent: "center" }}>
-                    {
-                        users.map((user, i) => {
-                            return <tr>
-                                <td>{user.id}</td>
-                                <td>{user.nombre}</td>
-                                <td>{user.apellidos}</td>
-                                <td>{user.email}</td>
-                                <td>{user.contraseña}</td>
-                                <td>{user.fechaNacimiento}</td>
-                                <td><button className="btn btn-danger" onClick={() => deleteTest(user.id)}>Eliminar</button></td>
-                                <td><button className="btn btn-primary" onClick={() => dataTransfer(user)}>Editar</button></td>
-                            </tr>
-                        })
-                    }
-                </tbody>
-            </Table>
-            <UserEdit show={show} handleClose={handleClose} editTest={editTest} registroEdit={registroEdit}/>
+            <Container fluid>
+                <caption align="center">Usuarios</caption>
+                <Table striped bordered hover variant="ligth"
+                    style={{
+                        background: "#a5edff",
+                        borderColor: "gray"
+                    }}>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Correo electrónico</th>
+                            <th>Contraseña</th>
+                            <th>Fecha de Nacimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody style={{ justifyContent: "center" }}>
+                        {
+                            users.map((user, i) => {
+                                return <tr>
+                                    <td>{user.id}</td>
+                                    <td>{user.nombre}</td>
+                                    <td>{user.apellidos}</td>
+                                    <td>{user.email}</td>
+                                    <td>{user.contraseña}</td>
+                                    <td>{user.fechaNacimiento}</td>
+                                    <td><button className="btn btn-danger" onClick={() => deleteTest(user.id)}>Eliminar</button></td>
+                                    <td><button className="btn btn-primary" onClick={() => dataTransfer(user)}>Editar</button></td>
+                                </tr>
+                            })
+                        }
+                    </tbody>
+                </Table>
+                <UserEdit show={show} handleClose={handleClose} editTest={editTest} registroEdit={registroEdit} />
+            </Container>
         </>
     );
 }
