@@ -1,11 +1,20 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import "../css-components/home-product.css";
+import { useNavigate } from 'react-router-dom';
 
 //json file
 import Autos from "../autos.json";
 
 const HomeProducts = () => {
+    const navigate = useNavigate();
+
+    const click = (e) => {
+        if (e && e.preventDefault()) e.preventDefault();
+
+        navigate('/react-example/ProductCard');
+    };
+
     
     return (
         <Container fluid>
@@ -29,7 +38,7 @@ const HomeProducts = () => {
                                         <h3 class="card-title">{auto.modelo}</h3>
                                         <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
                                         <br />
-                                        <a href="index.html" title="ver" class="buttonSeeProducts">Ver producto </a>
+                                        <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click} >Ver producto </a>
                                     </div>
                                 </div>
                             </div>
