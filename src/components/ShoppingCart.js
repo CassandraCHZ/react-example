@@ -12,8 +12,9 @@ function Carrito() {
         carros[0].precio + carros[1].precio + carros[2].precio
     );
 
-    const eliminarP = (index) => {
-        console.log(index)
+    const eliminarP = (producto) => {
+        console.log("hola")
+        console.log("producto"+producto);
     }
     return (
         <Container fluid>
@@ -24,44 +25,37 @@ function Carrito() {
             <br />
             <Row>
                 <Col md="auto" lg={8}>
-                    {carros.map((producto,index)=> {
-                        return (
-                            <Col>
-                                <div style={{
-                                    background: "white",
-                                    color: "white",
-                                    padding: "12px",
-                                }}>
-                                    <Table>
-                                        <tbody>
-                                            <tr>
-                                                <td><img
-                                                    width="220 px"
-                                                    height="120 px"
-                                                    src={producto.imagen}
-                                                    title="Producto"
-                                                    alt="Producto" /></td>
-                                                <td><b>{producto.modelo}
-                                                    <br />{producto.year}
-                                                    <br />${producto.precio} mxn
-                                                </b></td>
-                                                <td>
-                                                    <InputGroup className="mb-3">
-                                                        <Button variant="outline-danger"><b>-</b></Button>
-                                                        <Form.Control class="form-control-sm" style={{ maxWidth: 40 + "px" }}></Form.Control>
-                                                        <Button variant="outline-success" onClick={eliminarP(index)}><b>+</b></Button>
-                                                        <CloseButton variant='black'>
-                                                        </CloseButton>
-                                                    </InputGroup>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </Table>
-                                </div>
-                            </Col>
-                        );
-                    })
+                    {
+                        carros.map(producto => {
+                            return (
+                                <Table>
+                                    <tbody>
+                                        <tr>
+                                            <td><img
+                                                width="220 px"
+                                                height="120 px"
+                                                src={producto.imagen}
+                                                title="Producto"
+                                                alt="Producto" /></td>
+                                            <td><b>{producto.modelo}
+                                                <br />{producto.year}
+                                                <br />${producto.precio} mxn
+                                            </b></td>
+                                            <td>
+                                                <InputGroup className="mb-3">
+                                                    <Button variant="outline-danger"><b>-</b></Button>
+                                                    <Form.Control class="form-control-sm" style={{ maxWidth: 40 + "px" }}></Form.Control>
+                                                    <Button variant="outline-success" ><b>+</b></Button>
+                                                    <CloseButton variant='black' onClick={eliminarP}></CloseButton>
+                                                </InputGroup>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </Table>
+                            );
+                        })
                     }
+
                 </Col>
 
                 <Col xs lg={4}>
