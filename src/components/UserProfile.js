@@ -9,6 +9,16 @@ function GridComplexExample() {
   const [disable, setDisable] = useState(true);
   const disableFalse = () => setDisable(false);
   const disableTrue = () => setDisable(true);
+
+  const [editUser, setEditUser] = useState({
+    nombre: "Andrea Elizabeth",
+    apellidoP: "Flores",
+    apellidoM: "Padilla",
+    direccion: "av. jose maria chavez",
+    correo: "andrea@gmail.com",
+    contraseña:"1234"
+  })
+
   const cli = (e) => {
     if (e && e.preventDefault()) e.preventDefault();
     disableFalse();
@@ -27,20 +37,20 @@ function GridComplexExample() {
       <Row className="mb-3 mx-5" >
       <Form.Group as={Col} className="col-md-4" controlId="formGridName">
         <Form.Label>Nombre</Form.Label>
-        <Form.Control placeholder="Andrea Elizabeth"  disabled={disable}/>
+        <Form.Control placeholder={editUser.nombre}  disabled={disable}/>
       </Form.Group>
   
       
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname1">
           <Form.Label>Apellido paterno</Form.Label>
-          <Form.Control placeholder="Flores" disabled={disable}/>
+          <Form.Control placeholder={editUser.apellidoP} disabled={disable}/>
         </Form.Group>
      
 
      
         <Form.Group as={Col} className="col-md-4" controlId="formGridLastname2">
           <Form.Label>Apellido materno</Form.Label>
-          <Form.Control placeholder="Padilla"  disabled={disable}/>
+          <Form.Control placeholder={editUser.apellidoM}  disabled={disable}/>
         </Form.Group>
       </Row>
 
@@ -49,18 +59,18 @@ function GridComplexExample() {
         <Form.Group as={Col}  className="col-md-4" controlId="formGridEmail">
           <Form.Label>Correo</Form.Label>
           <Form.Control
-            placeholder="electricar19151653@gmail.com"
+            placeholder={editUser.correo}
             disabled={disable} />
         </Form.Group>
 
         <Form.Group as={Col}  className="col-md-4" controlId="formGridPassword">
           <Form.Label>Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña"  disabled={disable} />
+          <Form.Control type="password" placeholder={editUser.contraseña}  disabled={disable} />
         </Form.Group>
       
       <Form.Group as={Col} className="col-md-4" controlId="formGridAddress">
         <Form.Label>Dirección</Form.Label>
-        <Form.Control placeholder="Mahatma Ghandi" disabled={disable} />
+        <Form.Control placeholder={editUser.direccion} disabled={disable} />
       </Form.Group>
       </Row>
       <Button className='buttonSeeProducts me-3'  disabled={disable}  type="submit">
