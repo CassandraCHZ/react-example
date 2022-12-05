@@ -81,7 +81,7 @@ export default function Usuario() {
                                     <td>{user.email}</td>
                                     <td>{user.contraseña}</td>
                                     <td>{user.fechaNacimiento}</td>
-                                    <td><button className="btn btn-danger" onClick={() => deleteTest(user.id)}>Eliminar</button></td>
+                                    <td><button className="btn btn-danger" onClick={() => deleteTest(user.id)}>Borrar</button></td>
                                     <td><button className="btn btn-primary" onClick={() => dataTransfer(user)}>Editar</button></td>
                                 </tr>
                             })
