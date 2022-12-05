@@ -72,7 +72,7 @@ const ProductCard = () => {
 
                 <Button className='buttonSeeProducts' onClick={toastShowC}>Añadir al carrito</Button>
 
-                <img src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }} onClick={toastShowF}></img>
+                <img alt="Favoritos" title="Favoritos" src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }} onClick={toastShowF}></img>
             </div>
             <br />
             <br />
