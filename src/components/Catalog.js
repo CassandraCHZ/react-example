@@ -26,75 +26,86 @@ const Catalog = () => {
 
     const [autosTodos, setAutosTodos] = useState(Autos.autos);
 
-    const [camionetas, setCamionetas] = useState([Autos.autos[6], Autos.autos[7], Autos.autos[9]] );
+    const [camionetas, setCamionetas] = useState([Autos.autos[6], Autos.autos[7], Autos.autos[9]]);
 
-    const [automoviles, setAutomoviles] = useState([Autos.autos[0], Autos.autos[1], Autos.autos[2], Autos.autos[3], Autos.autos[4], Autos.autos[5], Autos.autos[8]] );
+    const [automoviles, setAutomoviles] = useState([Autos.autos[0], Autos.autos[1], Autos.autos[2], Autos.autos[3], Autos.autos[4], Autos.autos[5], Autos.autos[8]]);
 
-    const [menorMayorCar, setMenorMayorCar] = useState([Autos.autos[8], Autos.autos[1], Autos.autos[2], Autos.autos[4], Autos.autos[7], Autos.autos[0], Autos.autos[3], Autos.autos[5],Autos.autos[9],Autos.autos[6]], );
-    
-    const [mayorMenorCar, setMayorMenorCar] = useState([Autos.autos[6], Autos.autos[9], Autos.autos[5], Autos.autos[3], Autos.autos[0], Autos.autos[7], Autos.autos[4], Autos.autos[2],Autos.autos[1],Autos.autos[8]], );
+    const [menorMayorCar, setMenorMayorCar] = useState([Autos.autos[8], Autos.autos[1], Autos.autos[2], Autos.autos[4], Autos.autos[7], Autos.autos[0], Autos.autos[3], Autos.autos[5], Autos.autos[9], Autos.autos[6]],);
 
+    const [mayorMenorCar, setMayorMenorCar] = useState([Autos.autos[6], Autos.autos[9], Autos.autos[5], Autos.autos[3], Autos.autos[0], Autos.autos[7], Autos.autos[4], Autos.autos[2], Autos.autos[1], Autos.autos[8]],);
 
-    const selectMenorMayor=()=>{
+    const selectMenorMayor = () => {
         setAutosOriginales(menorMayorCar);
     }
 
-    const selectMayorMenor=()=>{
+    const selectMayorMenor = () => {
         setAutosOriginales(mayorMenorCar);
     }
 
-    const selectTodos=()=>{
+    const selectTodos = () => {
         setAutosOriginales(autosTodos);
     }
 
-    const selectCamionetas=()=>{
+    const selectCamionetas = () => {
         setAutosOriginales(camionetas);
     }
 
-    const selectAutomoviles=()=>{
+    const selectAutomoviles = () => {
         setAutosOriginales(automoviles);
     }
+    //buscar
+    const [buscarPalabra, SetBuscarPalabra] = useState({ palabra: 'buscar' });
+
+    const buscar = () => {
+        console.log("buscando" + buscarPalabra.palabra + " hola");
+    }
+    const onChangePalabra = (e) => {
+        e.persist();
+        SetBuscarPalabra({ ...buscarPalabra, [e.target.name]: e.target.value });
+    };
 
     return (
-       
+
         <Container fluid>
-         
-            <br/>
+
+            <br />
             <br></br>
             <br></br>
             <h1 class="text-center">Catálogo</h1>
             <br></br>
-           
-            <div class="row">
-  
-    <div class="col-md-6">
-    </div>
 
-    <div class="col-md-1">
-            <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-primary">
-            <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
-            <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
-            <Dropdown.Item as="button" onClick= {selectMayorMenor}>Mayor precio </Dropdown.Item>
-            </DropdownButton>
-    </div>
-    <div class="col-md-4">
-    <>
-            <InputGroup className="mb-3">
-            <InputGroup.Text id="search-bar"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-            </svg></InputGroup.Text>
-            <Form.Control
-           placeholder="Buscar producto..."
-           aria-label="Buscar Producto"
-           aria-describedby="Buscar Producto" />
-           </InputGroup>
-            </>  
-    </div>      
-</div>
+            <div class="row">
+
+                <div class="col-md-6">
+                </div>
+
+                <div class="col-md-1">
+                    <DropdownButton id="dropdown-item-button" title="Ordenar" variant="outline-primary">
+                        <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
+                    </DropdownButton>
+                </div>
+                <div class="col-md-4">
+
+                    <InputGroup className="mb-3" >
+                        <Button variant="primary" onClick={buscar} style={{ marginLeft: "40px" }}>Buscar</Button>
+                        <Form.Control
+                            type="text"
+                            onChange={onChangePalabra}
+                            placeholder="Buscar producto..."
+                            aria-label="Large"
+                            aria-describedby="inputGroup-sizing-sm"
+                        />
+                    </InputGroup>
+
+
+                </div>
+            </div>
             <div class="row row-cols-1 row-cols-md-4 g-4">
-       
+
                 {
                     autosOriginales.map(auto => {
                         return (
@@ -121,8 +132,9 @@ const Catalog = () => {
             </div>
             <br></br>
         </Container>
-   
+
     );
 }
 
 export default Catalog;
+
