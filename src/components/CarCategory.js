@@ -10,7 +10,6 @@ export default function Producto() {
 
     const [Coche2] = useState({
         modelo: "Corolla",
-        year: "2022",
         descripcion: "El Toyota Corolla se caracteriza por ser un coche que ha acercado la tecnología híbrida al común de los conductores con un buen diseño, calidad interior, eficiencia, bajos consumos y un precio razonable. Es uno de los autos insignia de la marca y uno de los referentes en el segmento de los compactos, con una gran popularidad en todo el mundo que viene gracias a la durabilidad, desempeño y calidad.000"
     })
 
