@@ -16,7 +16,7 @@ function GridComplexExample() {
     apellidoM: "Padilla",
     direccion: "av. jose maria chavez",
     correo: "andrea@gmail.com",
-    contraseña:"1234"
+    
   })
 
   const cli = (e) => {
