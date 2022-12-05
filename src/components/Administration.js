@@ -19,7 +19,7 @@ export default function Administration() {
            <br></br>
            <br></br>
 
-           
+           <Usuario></Usuario>
            
         </Container>
     );

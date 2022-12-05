@@ -20,24 +20,23 @@ export default function Usuario() {
     })
     return (
         <>
+        <caption align="center">Usuarios</caption>
             <Table striped bordered hover variant="ligth" 
                 style={{
                     background: "#a5edff",
                     borderColor: "gray"
                 }}>
-                <thead>
+           <thead>
                     <tr>
                         <th>#</th>
-                        <th>Código de pedido</th>
-                        <th>Fecha</th>
-                        <th>Precio Total(MXN)</th>
-                        <th>Método de Pago</th>
-                        <th>Estatus</th>
-                        <th>Factura</th>
-                        <th>Detalles</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>email</th>
+                        <th>contraseña</th>
+                        <th>Fecha de Nacimiento</th>
                     </tr>
                 </thead>
-            </Table>
+           </Table>
         </>
     );
 }
