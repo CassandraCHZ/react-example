@@ -21,12 +21,12 @@ const Navigation = () => {
                         <Navbar.Brand as={Link} to="/react-example/Contact" title="Contacto"><h4 style={{ color: "#006655" }} >Contacto</h4></Navbar.Brand>
 
                         <Nav className="me-auto">
-                            <NavDropdown title="Tu cuenta" id="collasible-nav-dropdown">
-                                <NavDropdown.Item as={Link} to="/react-example/UserProfile" title="Perfil">Perfil</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/react-example/Login" title="Inicio sesión">Inicio sesión</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/react-example/Home" title="Cerrar sesión">Cerrar sesión</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/react-example/PurchaseOrder" title="Orden de Compra">Órdenes de Compra</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/react-example/ShoppingCart" title="Carrito">Carrito</NavDropdown.Item>
+                            <NavDropdown title="Tu cuenta" id="collasible-nav-dropdown" style={{ color: "#006655", fontSize: 18 + "pt" }}>
+                                <NavDropdown.Item as={Link} to="/react-example/UserProfile" title="Perfil" style={{ color: "#006655"}}>Perfil</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/react-example/Login" title="Inicio sesión" style={{ color: "#006655"}}>Inicio sesión</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/react-example/Home" title="Cerrar sesión" style={{ color: "#006655"}}>Cerrar sesión</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/react-example/PurchaseOrder" title="Orden de Compra" style={{ color: "#006655"}}>Órdenes de Compra</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/react-example/ShoppingCart" title="Carrito" style={{ color: "#006655"}}>Carrito</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
                     </Navbar.Collapse>
