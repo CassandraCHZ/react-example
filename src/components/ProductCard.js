@@ -113,9 +113,9 @@ const ProductCard = () => {
             <ToastContainer className="p-3" position={position}>
                 <Toast show={showToastF} onClose={toastCloseF}>
                     <Toast.Header>
-                        <strong className="me-auto">Añadir a tu lista de deseos</strong>
+                        <strong className="me-auto">Añadir a favoritos</strong>
                     </Toast.Header>
-                    <Toast.Body>Se añadió correctamente a tu lista de deseos.</Toast.Body>
+                    <Toast.Body>Se añadió correctamente a tus favoritos.</Toast.Body>
                 </Toast>
             </ToastContainer>
 
