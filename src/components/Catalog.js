@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -13,6 +14,14 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Autos from "../autos.json";
 
 const HomeProducts = () => {
+    const navigate = useNavigate();
+
+    const click = (e) => {
+        if (e && e.preventDefault()) e.preventDefault();
+
+        navigate('/react-example/ProductCard');
+    };
+
     return (
        
         <Container fluid>
@@ -76,7 +85,7 @@ const HomeProducts = () => {
                                         <h3 class="card-title">{auto.modelo}</h3>
                                         <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
                                         <br />
-                                        <a href="index.html" title="ver" class="buttonSeeProducts">Ver producto </a>
+                                        <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
                                     </div>
                                 </div>
                             </div>
