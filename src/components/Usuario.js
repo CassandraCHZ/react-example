@@ -1,7 +1,14 @@
 import React, { useState } from 'react';
 import { Container, Table, Button, Row, Col, Modal } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import UserEdit from './UserEdit'
 
 export default function Usuario() {
+
+    const [show, setShow] = useState(false);
+    const [registroEdit, setRegistroEdit] = useState(null);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const [users, setUser] = useState([
         {
@@ -26,8 +33,7 @@ export default function Usuario() {
             apellidos: "Mascorro Luévano",
             email: "smascorro2001@gmail.com",
             contraseña: "1dsa483dt4",
-            fechaNacimiento: "23/09/2001",
-            descripcion: "Te presentamos Nuevo Tiguan, el SUVW que reúne todo lo que tú y tu familia necesitan en seguridad, tecnología y entretenimiento para todos los trayectos juntos.",
+            fechaNacimiento: "23/09/2001"
         }
     ]);
 
@@ -35,8 +41,14 @@ export default function Usuario() {
         setUser(users.filter(user=>user.id!==id))
     }
 
-    function editTest(id, datos){
-        setUser(users.map(user=>user.id===id ? datos : user))
+    function editTest(datos){
+        setUser(users.map(user=>user.id===datos.id ? datos : user));
+        handleClose();
+    }
+
+    function dataTransfer(datos){
+        handleShow();
+        setRegistroEdit(datos);
     }
 
 
@@ -68,12 +80,14 @@ export default function Usuario() {
                                 <td>{user.email}</td>
                                 <td>{user.contraseña}</td>
                                 <td>{user.fechaNacimiento}</td>
-                                <td><button onClick={() => deleteTest(user.id)}>Eliminar</button></td>
+                                <td><button className="btn btn-danger" onClick={() => deleteTest(user.id)}>Eliminar</button></td>
+                                <td><button className="btn btn-primary" onClick={() => dataTransfer(user)}>Editar</button></td>
                             </tr>
                         })
                     }
                 </tbody>
             </Table>
+            <UserEdit show={show} handleClose={handleClose} editTest={editTest} registroEdit={registroEdit}/>
         </>
     );
 }
