@@ -3,23 +3,12 @@ import { Container, Table, Button, Row, Col, Modal, Form } from 'react-bootstrap
 
 
 function Example(props) {
-    //const [show, setShow] = useState(false);
-    // const [valores, setValores] = useState({
-    //     nombre: "",
-    //     apellido: "",
-    //     email: "",
-    //     contraseña: "",
-    //     fechaNacimiento: ""
-    // });
 
     const [valores, setValores] = useState(props.registroEdit);
 
     useEffect(() => {
         setValores(props.registroEdit);
     }, [props.registroEdit]);
-
-    //const handleClose = () => setShow(false);
-    //const handleShow = () => setShow(true);
 
     console.log(props);
 
@@ -53,10 +42,10 @@ function Example(props) {
                 </Form></Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={props.handleClose}>
-                        Close
+                        Cancelar
                     </Button>
                     <Button variant="primary" onClick={()=>props.editTest(valores)}>
-                        Save Changes
+                        Guardar cambios
                     </Button>
                 </Modal.Footer>
             </Modal>
