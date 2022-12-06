@@ -56,7 +56,7 @@ export default function Usuario() {
         <>
             <Container fluid>
                 <caption align="center">Usuarios</caption>
-                <Table striped bordered hover variant="ligth"
+                <Table responsive="md" striped bordered hover variant="ligth"
                     style={{
                         background: "#a5edff",
                         borderColor: "gray"
