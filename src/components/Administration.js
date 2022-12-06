@@ -20,17 +20,14 @@ export default function Administration() {
            <h4 align="center">Tablero</h4>
 
            <br></br>
-           <br></br>
 
            <Usuario></Usuario>
 
            <br></br>
            <br></br>
-           <br></br>
 
            <Product></Product>
            
-           <br></br>
            <br></br>
            <br></br>
 
