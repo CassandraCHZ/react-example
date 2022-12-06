@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
 import { Container, Button, Row, Col, Toast, ToastContainer, Table, Modal, Form } from 'react-bootstrap';
+import { useLocation } from 'react-router-dom';
 //json file
 import Autos from "../autos.json";
 
 const ProductCard = () => {
-    
+    const location = useLocation();
+
+    const auto=Autos.autos.find(carro => carro.id === location.state.autoID);
+
     const click = (e) => {
         if (e && e.preventDefault()) e.preventDefault();
         modalClose();
     };
-
-    const [Car, setCar] = useState(
-        Autos.autos
-    )
+    
 
     const [position, setPosition] = useState('bottom-center');
 
@@ -37,28 +38,28 @@ const ProductCard = () => {
             <Row style={{ textAlign: "left" }}>
                 <Col >
                     <br /> <br />  <br /> <br />
-                    <img alt="ProductCard" title="ProductCar" src={Car[0].imagen} width={550}></img>
+                    <img alt="ProductCard" title="ProductCar" src={auto.imagen} width={550}></img>
                 </Col>
                 <Col md="5" >
-                    <h2 >{Car[0].modelo} </h2>
-                    <h5 style={{ color: "#5664DE" }}>$ {Car[0].precio} MXN</h5>
-                    <h5>Precio con IVA: $ {Car[0].precio * 1.16} MXN</h5>
-                    <h5 style={{ textAlign: "justify" }}>{Car[0].descripcion}</h5>
+                    <h2>{auto.modelo}</h2>
+                    <h5 style={{ color: "#5664DE" }}>$ {auto.precio} MXN</h5>
+                    <h5>Precio con IVA: $ {auto.precio * 1.16} MXN</h5>
+                    <h5 style={{ textAlign: "justify" }}>{auto.descripcion}</h5>
                     <h4 style={{ textAlign: "center" }}>Características</h4>
                     <Row>
                         <Col>
-                            <h5> Categoría: {Car[0].categoria}</h5>
-                            <h5>   Año: {Car[0].year} </h5>
-                            <h5>  Longitud: {Car[0].longitud}</h5>
-                            <h5>   Altura: {Car[0].altura}</h5>
-                            <h5>  Anchura: {Car[0].anchura}</h5>
+                            <h5> Categoría: {auto.categoria}</h5>
+                            <h5>   Año: {auto.year} </h5>
+                            <h5>  Longitud: {auto.longitud}</h5>
+                            <h5>   Altura: {auto.altura}</h5>
+                            <h5>  Anchura: {auto.anchura}</h5>
                         </Col>
                         <Col md="5">
-                            <h5> Autonomía: {Car[0].autonomia}</h5>
-                            <h5> Potencia: {Car[0].potencia}</h5>
-                            <h5> Transmisión: {Car[0].transmision}</h5>
-                            <h5> Marca: {Car[0].marca}</h5>
-                            <h5> Colores: {Car[0].colores}</h5>
+                            <h5> Autonomía: {auto.autonomia}</h5>
+                            <h5> Potencia: {auto.potencia}</h5>
+                            <h5> Transmisión: {auto.transmision}</h5>
+                            <h5> Marca: {auto.marca}</h5>
+                            <h5> Colores: {auto.colores}</h5>
                         </Col>
                     </Row>
                 </Col>
@@ -78,7 +79,7 @@ const ProductCard = () => {
             <br />
 
             <div>
-                <h4>Comentarios</h4>
+                <h4>Comentarios sobre: {auto.modelo}</h4>
                 <Table style={{ backgroundColor: "#E7F7F7" }}>
                     <thead>
                         <tr>
