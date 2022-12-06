@@ -11,12 +11,6 @@ import Autos from "../autos.json";
 const Catalog = () => {
     const navigate = useNavigate();
 
-    const click = (e) => {
-        if (e && e.preventDefault()) e.preventDefault();
-
-        navigate('/react-example/ProductCard');
-    };
-
     const [autosOriginales, setAutosOriginales] = useState(Autos.autos);
 
     const [autosTodos, setAutosTodos] = useState(Autos.autos);
@@ -136,7 +130,11 @@ const Catalog = () => {
                                         <h3 class="card-title">{auto.modelo}</h3>
                                         <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
                                         <br />
-                                        <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
+                                        <Button className='buttonSeeProducts' 
+                                        onClick={()=>{
+                                            //console.log(auto.id);
+                                            navigate('/react-example/ProductCard',{state:{autoID:auto.id}});
+                                        }}>Ver producto</Button>
                                     </div>
                                 </div>
                             </div>
