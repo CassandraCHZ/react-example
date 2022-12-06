@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Form, Button, Row, Col } from 'react-bootstrap';
+import { Container, Row, Form, Button, Dropdown, DropdownButton, Col } from 'react-bootstrap';
 import "../css-components/home-product.css";
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import { useNavigate } from 'react-router-dom';
-
 
 
 
@@ -31,7 +28,6 @@ const Catalog = () => {
     const [menorMayorCar, setMenorMayorCar] = useState([Autos.autos[8], Autos.autos[1], Autos.autos[2], Autos.autos[4], Autos.autos[7], Autos.autos[0], Autos.autos[3], Autos.autos[5], Autos.autos[9], Autos.autos[6]],);
 
     const [mayorMenorCar, setMayorMenorCar] = useState([Autos.autos[6], Autos.autos[9], Autos.autos[5], Autos.autos[3], Autos.autos[0], Autos.autos[7], Autos.autos[4], Autos.autos[2], Autos.autos[1], Autos.autos[8]],);
-
 
     const selectMenorMayor = () => {
         setAutosOriginales(menorMayorCar);
@@ -74,8 +70,6 @@ const Catalog = () => {
 
     const productosVacio = (autosOriginales.length > 0)
 
-
-
     return (
 
         <Container fluid>
@@ -87,17 +81,21 @@ const Catalog = () => {
             <br></br>
 
             <Row>
-                <Form>
-                    <Row style={{ textAlign: "right" }}  >
-                        <DropdownButton style={{ maxWidth: 200 + "px" }} id="dropdown-item-button" title="Ordenar" variant="outline-primary">
-                            <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
-                            <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
-                            <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
-                            <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
-                            <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
-                        </DropdownButton>
-                        <Button variant="dark" onClick={buscar} style={{ marginLeft: "0px", maxWidth: 80 + "px" }}>Buscar</Button>
-                        <Form.Group style={{ maxWidth: 200 + "px" }} controlId="buscar" >
+                <Row style={{ textAlign: "right" }}  >
+                    <Col>
+                     <DropdownButton style={{ maxWidth: 200 + "px" }} id="dropdown-item-button" title="Ordenar" variant="outline-primary">
+                        <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
+                    </DropdownButton>
+                    </Col>
+                    <Col>
+                    <Button variant="dark" onClick={buscar} style={{ marginLeft: "0px", maxWidth: 80 + "px" }}>Buscar</Button>
+                    </Col>
+                    <Col>
+                    <Form.Group style={{ maxWidth: 200 + "px" }} controlId="buscar" >
                             <Form.Control
                                 type="text"
                                 value={buscarPalabra.palabra}
@@ -106,45 +104,45 @@ const Catalog = () => {
                                 name="palabra"
                             />
                         </Form.Group>
+                    </Col>
+                   
+                    <Row style={{ textAlign: "right" }}>
+                        <br></br>
                     </Row>
-                </Form>
+                </Row>
             </Row>
-            <br></br>
+
+
             <div class="row row-cols-1 row-cols-md-4 g-4">
 
                 {
-
-                    productosVacio
-                        ? autosOriginales.map(auto => {
-                            return (
-                                <div class="col">
-                                    <div class="card border-info mb-3 card text-center" >
-                                        <img
-                                            width="50"
-                                            height="100%"
-                                            src={auto.imagen}
-                                            title={auto.modelo}
-                                            class="card-img-top"
-                                            alt={auto.modelo + ". " + auto.year} />
-                                        <div class="card-body">
-                                            <h3 class="card-title">{auto.modelo}</h3>
-                                            <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
-                                            <br />
-                                            <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
-                                        </div>
+                    productosVacio ? autosOriginales.map(auto => {
+                        return (
+                            <div class="col">
+                                <div class="card border-info mb-3 card text-center" >
+                                    <img
+                                        width="50"
+                                        height="100%"
+                                        src={auto.imagen}
+                                        title={auto.modelo}
+                                        class="card-img-top"
+                                        alt={auto.modelo + ". " + auto.year} />
+                                    <div class="card-body">
+                                        <h3 class="card-title">{auto.modelo}</h3>
+                                        <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
+                                        <br />
+                                        <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
                                     </div>
                                 </div>
-                            )
-                        })
+                            </div>
+                        )
+                    })
                         : <Row>
 
                             <h2>
                                 <br></br>
                                 No fue encontrada ninguna coincidencia.</h2>
                         </Row>
-
-
-
                 }
             </div>
             <br></br>
@@ -154,4 +152,3 @@ const Catalog = () => {
 }
 
 export default Catalog;
-
