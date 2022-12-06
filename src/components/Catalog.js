@@ -60,13 +60,20 @@ const Catalog = () => {
         const arrCopy = Array.from(autosTodos);
         const objWithIdIndex = arrCopy.findIndex((obj) => obj.modelo === buscarPalabra.palabra);
         console.log("Posicion:" + objWithIdIndex);
-        console.log(Autos.autos[objWithIdIndex]);
-        setAutosOriginales([Autos.autos[objWithIdIndex]]);
+        if (objWithIdIndex == -1) {
+            setAutosOriginales([]);
+        } else {
+            console.log(Autos.autos[objWithIdIndex]);
+            setAutosOriginales([Autos.autos[objWithIdIndex]]);
+        }
     }
     const onChangePalabra = (e) => {
         e.persist();
         SetBuscarPalabra({ ...buscarPalabra, [e.target.name]: e.target.value });
     };
+
+    const productosVacio = (autosOriginales.length > 0)
+
 
 
     return (
@@ -81,7 +88,7 @@ const Catalog = () => {
 
             <Row>
                 <Form>
-                    <Row style={{textAlign:"right"}}  >
+                    <Row style={{ textAlign: "right" }}  >
                         <DropdownButton style={{ maxWidth: 200 + "px" }} id="dropdown-item-button" title="Ordenar" variant="outline-primary">
                             <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
                             <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
@@ -90,7 +97,7 @@ const Catalog = () => {
                             <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
                         </DropdownButton>
                         <Button variant="dark" onClick={buscar} style={{ marginLeft: "0px", maxWidth: 80 + "px" }}>Buscar</Button>
-                        <Form.Group style={{ maxWidth: 200 + "px"}} controlId="buscar" >
+                        <Form.Group style={{ maxWidth: 200 + "px" }} controlId="buscar" >
                             <Form.Control
                                 type="text"
                                 value={buscarPalabra.palabra}
@@ -106,27 +113,38 @@ const Catalog = () => {
             <div class="row row-cols-1 row-cols-md-4 g-4">
 
                 {
-                    autosOriginales.map(auto => {
-                        return (
-                            <div class="col">
-                                <div class="card border-info mb-3 card text-center" >
-                                    <img
-                                        width="50"
-                                        height="100%"
-                                        src={auto.imagen}
-                                        title={auto.modelo}
-                                        class="card-img-top"
-                                        alt={auto.modelo + ". " + auto.year} />
-                                    <div class="card-body">
-                                        <h3 class="card-title">{auto.modelo}</h3>
-                                        <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
-                                        <br />
-                                        <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
+
+                    productosVacio
+                        ? autosOriginales.map(auto => {
+                            return (
+                                <div class="col">
+                                    <div class="card border-info mb-3 card text-center" >
+                                        <img
+                                            width="50"
+                                            height="100%"
+                                            src={auto.imagen}
+                                            title={auto.modelo}
+                                            class="card-img-top"
+                                            alt={auto.modelo + ". " + auto.year} />
+                                        <div class="card-body">
+                                            <h3 class="card-title">{auto.modelo}</h3>
+                                            <h6 class="card-text">{"$" + auto.precio + " mxn"}</h6>
+                                            <br />
+                                            <a href="index.html" title="ver" class="buttonSeeProducts" onClick={click}>Ver producto </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        )
-                    })
+                            )
+                        })
+                        : <Row>
+
+                            <h2>
+                                <br></br>
+                                No fue encontrada ninguna coincidencia.</h2>
+                        </Row>
+
+
+
                 }
             </div>
             <br></br>
