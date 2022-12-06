@@ -32,7 +32,7 @@ function Example(props) {
                         <Form.Control type="email" placeholder="Correo" value={valores?.email} onChange={(e)=>setValores({...valores, email: e.target.value})}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="passwordId">
-                        <Form.Label>Contraseñña</Form.Label>
+                        <Form.Label>Contraseña</Form.Label>
                         <Form.Control type="password" placeholder="Contraseña" value={valores?.contraseña} onChange={(e)=>setValores({...valores, contraseña: e.target.value})}/>
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="BirthDate">
