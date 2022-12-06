@@ -30,22 +30,27 @@ const Catalog = () => {
     const [mayorMenorCar, setMayorMenorCar] = useState([Autos.autos[6], Autos.autos[9], Autos.autos[5], Autos.autos[3], Autos.autos[0], Autos.autos[7], Autos.autos[4], Autos.autos[2], Autos.autos[1], Autos.autos[8]],);
 
     const selectMenorMayor = () => {
+        buscarPalabra.palabra="";
         setAutosOriginales(menorMayorCar);
     }
 
     const selectMayorMenor = () => {
+        buscarPalabra.palabra="";
         setAutosOriginales(mayorMenorCar);
     }
 
     const selectTodos = () => {
+        buscarPalabra.palabra="";
         setAutosOriginales(autosTodos);
     }
 
     const selectCamionetas = () => {
+        buscarPalabra.palabra="";
         setAutosOriginales(camionetas);
     }
 
     const selectAutomoviles = () => {
+        buscarPalabra.palabra="";
         setAutosOriginales(automoviles);
     }
     //buscar
@@ -83,19 +88,19 @@ const Catalog = () => {
             <Row>
                 <Row style={{ textAlign: "right" }}  >
                     <Col>
-                     <DropdownButton style={{ maxWidth: 200 + "px" }} id="dropdown-item-button" title="Ordenar" variant="outline-primary">
-                        <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
-                        <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
-                    </DropdownButton>
+                        <DropdownButton style={{ maxWidth: 200 + "px" }} id="dropdown-item-button" title="Ordenar" variant="outline-primary">
+                            <Dropdown.Item as="button" onClick={selectTodos}>Todos</Dropdown.Item>
+                            <Dropdown.Item as="button" onClick={selectAutomoviles}>Automóvil</Dropdown.Item>
+                            <Dropdown.Item as="button" onClick={selectCamionetas}>Camioneta</Dropdown.Item>
+                            <Dropdown.Item as="button" onClick={selectMenorMayor} >Menor precio</Dropdown.Item>
+                            <Dropdown.Item as="button" onClick={selectMayorMenor}>Mayor precio </Dropdown.Item>
+                        </DropdownButton>
                     </Col>
                     <Col>
-                    <Button variant="dark" onClick={buscar} style={{ marginLeft: "0px", maxWidth: 80 + "px" }}>Buscar</Button>
+                        <Button variant="dark" onClick={buscar} style={{ marginLeft: "0px", maxWidth: 80 + "px" }}>Buscar</Button>
                     </Col>
                     <Col>
-                    <Form.Group style={{ maxWidth: 200 + "px" }} controlId="buscar" >
+                        <Form.Group style={{ maxWidth: 200 + "px" }} controlId="buscar" >
                             <Form.Control
                                 type="text"
                                 value={buscarPalabra.palabra}
@@ -105,7 +110,7 @@ const Catalog = () => {
                             />
                         </Form.Group>
                     </Col>
-                   
+
                     <Row style={{ textAlign: "right" }}>
                         <br></br>
                     </Row>
@@ -137,12 +142,10 @@ const Catalog = () => {
                             </div>
                         )
                     })
-                        : <Row>
-
-                            <h2>
-                                <br></br>
-                                No fue encontrada ninguna coincidencia.</h2>
-                        </Row>
+                        :
+                        <h2>
+                            <br></br>
+                            No fue encontrada ninguna coincidencia.</h2>
                 }
             </div>
             <br></br>
