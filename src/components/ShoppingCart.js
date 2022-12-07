@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Container, Card, Button, CardGroup, Row, Col, Table, InputGroup, Form, CloseButton } from 'react-bootstrap'; import "../css-components/home-product.css";
 
 import PayPal from "./PayPal";
@@ -7,17 +7,12 @@ import Autos from "../autos.json";
 import Paypal from './PayPal';
 
 function Carrito() {
-    const [carros, setCarros] = useState([Autos.autos[0], Autos.autos[1], Autos.autos[2]]);
-    const [total, settotal] = useState('');
+    const [carros, setCarros] = useState(JSON.parse(localStorage.getItem('miCarrito')));
 
-    useEffect(() => {
-        pago();
-      });
-    const pago = () => {
-        let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0))*1.16;
-        console.log(pay)
-        settotal(pay);
-    }
+    (async function cargar() {
+        let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16;
+        sessionStorage.setItem("totalPP", pay);
+    }) ( );
 
     function removeObjectWithId(arr, id) {
         // Making a copy with the Array from() method
@@ -25,6 +20,11 @@ function Carrito() {
         const objWithIdIndex = arrCopy.findIndex((obj) => obj.id === id);
         arrCopy.splice(objWithIdIndex, 1);
         setCarros(arrCopy);
+        //local storage delete record
+        var carr = JSON.parse(localStorage.getItem('miCarrito'));
+        localStorage.setItem('miCarrito', JSON.stringify(carr.filter(carrr => carrr.id !== id)));
+        let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16;
+        sessionStorage.setItem("totalPP", pay);
         return arrCopy;
     }
 
@@ -76,11 +76,17 @@ function Carrito() {
 
                 </Col>
 
+                {(sessionStorage.getItem("totalPP")==0)?
+                <Row>
+<h2>Tu carrito esta vacio.</h2>
+                </Row>:
                 <Col xs lg={4}>
-                    <h1>Total a pagar con IVA:<br></br>$ {total}.00 mxn</h1>
+                    <h1>Total a pagar con IVA:<br></br>$ {sessionStorage.getItem("totalPP")} mxn</h1>
                     <br></br>
-                    <PayPal total={total}></PayPal>
+                    <PayPal total={sessionStorage.getItem("totalPP")}></PayPal>
                 </Col>
+                }
+                
             </Row>
 
 

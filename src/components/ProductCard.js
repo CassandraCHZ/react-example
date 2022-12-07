@@ -21,7 +21,16 @@ const ProductCard = () => {
 
     const [showToastC, setShowToastC] = useState(false);
     const toastCloseC = () => setShowToastC(false);
-    const toastShowC = () => setShowToastC(true);
+    const toastShowC = () => {
+        setShowToastC(true);
+        var carr = JSON.parse(localStorage.getItem('miCarrito'));
+        const objWithIdIndex = carr.findIndex((ca) => ca.id === auto.id);
+        if (objWithIdIndex == -1) {
+            const pCarr = { id: auto.id, modelo: auto.modelo, imagen: auto.imagen, year: auto.year, precio: auto.precio };
+            carr.push(pCarr);
+            localStorage.setItem('miCarrito', JSON.stringify(carr));
+        }
+    }
 
     const [showToastF, setShowToastF] = useState(false);
     const toastCloseF = () => setShowToastF(false);
@@ -34,7 +43,6 @@ const ProductCard = () => {
             fav.push(pFav);
             localStorage.setItem('misFavoritos', JSON.stringify(fav));
         }
-
     }
 
     const [show, setShow] = useState(false);
