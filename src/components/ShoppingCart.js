@@ -12,7 +12,7 @@ function Carrito() {
     (async function cargar() {
         let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16;
         sessionStorage.setItem("totalPP", pay);
-    }) ( );
+    })();
 
     function removeObjectWithId(arr, id) {
         // Making a copy with the Array from() method
@@ -76,17 +76,17 @@ function Carrito() {
 
                 </Col>
 
-                {(sessionStorage.getItem("totalPP")==0)?
-                <Row>
-<h2>Tu carrito esta vacio.</h2>
-                </Row>:
-                <Col xs lg={4}>
-                    <h1>Total a pagar con IVA:<br></br>$ {sessionStorage.getItem("totalPP")} mxn</h1>
-                    <br></br>
-                    <PayPal total={sessionStorage.getItem("totalPP")}></PayPal>
-                </Col>
+                {(sessionStorage.getItem("totalPP") == 0) ?
+                    <Row>
+                        <h2>Tu carrito esta vacio.</h2>
+                    </Row> :
+                    <Col xs lg={4}>
+                        <h1>Total a pagar con IVA:<br></br>$ {sessionStorage.getItem("totalPP")} mxn</h1>
+                        <br></br>
+                        <PayPal></PayPal>
+                    </Col>
                 }
-                
+
             </Row>
 
 
