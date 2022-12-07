@@ -1,11 +1,8 @@
-import React, { useLayoutEffect, useState } from 'react';
-import { Container, Card, Button, CardGroup, Row, Col, Table, InputGroup, Form, CloseButton } from 'react-bootstrap'; import "../css-components/home-product.css";
+import React, { useState } from 'react';
+import { Container, Row, Col, Table, InputGroup,CloseButton } from 'react-bootstrap'; 
+import "../css-components/home-product.css";
 
 import PayPal from "./PayPal";
-//json file
-import Autos from "../autos.json";
-import Paypal from './PayPal';
-
 function Carrito() {
     const [carros, setCarros] = useState(JSON.parse(localStorage.getItem('miCarrito')));
 
