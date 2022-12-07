@@ -8,12 +8,6 @@ function Favorites() {
 
     const navigate = useNavigate();
 
-    const click = (e) => {
-        if (e && e.preventDefault()) e.preventDefault();
-
-        navigate('/react-example/ProductCard');
-    };
-
     const [carros, setCarros] = useState(JSON.parse(localStorage.getItem('misFavoritos')));
 
     function removeObjectWithId(arr, id) {
@@ -59,12 +53,15 @@ function Favorites() {
                                             </td>
 
                                             <td>
-                                                <Button className='buttonSeeProducts' onClick={click}> Ver producto</Button>
+                                                <Button className='buttonSeeProducts' onClick={() => {
+                                                    //console.log(auto.id);
+                                                    navigate('/react-example/ProductCard', { state: { autoID: producto.id } });
+                                                }}> Ver producto</Button>
                                             </td>
 
                                             <td>
                                                 <InputGroup className="mb-3">
-                                                    <img alt="Favoritos" title="Favoritos" src="/react-example/Images/fav_eliminar.png" width={45} style={{ paddingLeft: "15px",cursor:"pointer" }} onClick={() => {
+                                                    <img alt="Favoritos" title="Favoritos" src="/react-example/Images/fav_eliminar.png" width={45} style={{ paddingLeft: "15px", cursor: "pointer" }} onClick={() => {
                                                         console.log("HoLa" + producto.modelo);
                                                         let car = carros.find(carro => carro.modelo === producto.modelo);
                                                         console.log(car);
@@ -81,7 +78,7 @@ function Favorites() {
                 </Col>
 
                 <Col xs lg={4}>
-                    <img src="/react-example/Images/Favorites.gif" title="Favoritos" alt="Favoritos" width={400}/>
+                    <img src="/react-example/Images/Favorites.gif" title="Favoritos" alt="Favoritos" width={400} />
                 </Col>
             </Row>
 

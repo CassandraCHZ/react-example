@@ -81,8 +81,6 @@ const ProductCard = () => {
                     </Row>
 
                     <div style={{ textAlign: "center" }}>
-                        <h4>Cantidad</h4>
-                        <input type="number" id="tentacles" name="tentacles" min="1" max="100" style={{ padding: "10px", backgroundColor: "#E2EAEA", borderRadius: "10px" }} ></input>
                         <br />
                         <br />
 
