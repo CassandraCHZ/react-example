@@ -26,7 +26,7 @@ function App() {
         if (!start) {
             var favoritos = [Autos.autos[9]];
             localStorage.setItem('misFavoritos', JSON.stringify(favoritos));
-            var carrito=[Autos.autos[1]];
+            var carrito=[Autos.autos[8]];
             localStorage.setItem('miCarrito',JSON.stringify(carrito));
             sessionStorage.setItem('totalPP',0);
             setStart(true);
