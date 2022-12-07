@@ -7,7 +7,7 @@ function Carrito() {
     const [carros, setCarros] = useState(JSON.parse(localStorage.getItem('miCarrito')));
 
     (async function cargar() {
-        let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16;
+        let pay = Math.trunc((carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16);
         sessionStorage.setItem("totalPP", pay);
     })();
 
@@ -20,7 +20,7 @@ function Carrito() {
         //local storage delete record
         var carr = JSON.parse(localStorage.getItem('miCarrito'));
         localStorage.setItem('miCarrito', JSON.stringify(carr.filter(carrr => carrr.id !== id)));
-        let pay = (carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16;
+        let pay =Math.trunc((carros.reduce((acumulador, actual) => acumulador + actual.precio, 0)) * 1.16);
         sessionStorage.setItem("totalPP", pay);
         return arrCopy;
     }
