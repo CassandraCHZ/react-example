@@ -2,6 +2,24 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Proyecto creado para la materia de negocios electronicos.
+creacion del repositorio
+https://github.com/gitname/react-gh-pages
+
+comandos importantes una vez terminas.
+npm start, es como en npm run watch.
+tambien si no esta la carpeta node_modules
+npm install
+
+despues instalamos las dependencias.
+ npm install react-bootstrap bootstrap@5.1.3 
+**npm audit fix --force
+
+despues npm add react-router-dom
+
+e instalamos la dependencia de paypal
+npm install @paypal/react-paypal-js
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -68,3 +86,5 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
