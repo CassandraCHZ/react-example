@@ -25,7 +25,13 @@ const ProductCard = () => {
 
     const [showToastF, setShowToastF] = useState(false);
     const toastCloseF = () => setShowToastF(false);
-    const toastShowF = () => setShowToastF(true);
+    const toastShowF = () =>{
+        setShowToastF(true);
+        var fav = JSON.parse(localStorage.getItem('misFavoritos'));
+        const pFav = {id:auto.id, modelo:auto.modelo,imagen:auto.imagen,year:auto.year,precio:auto.precio};
+        fav.push(pFav);
+        localStorage.setItem('misFavoritos', JSON.stringify(fav));
+    }
 
     const [show, setShow] = useState(false);
     const modalClose = () => setShow(false);
@@ -78,7 +84,7 @@ const ProductCard = () => {
 
                         <Button className='buttonSeeProducts' onClick={toastShowC}>Añadir al carrito</Button>
 
-                        <img alt="Favoritos" title="Favoritos" src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }} onClick={toastShowF}></img>
+                        <img alt="Favoritos" title="Favoritos" src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px",cursor:"pointer"}} onClick={toastShowF}></img>
                     </div>
                     <br />
                     <br />

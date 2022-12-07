@@ -14,7 +14,7 @@ function Favorites() {
         navigate('/react-example/ProductCard');
     };
 
-    const [carros, setCarros] = useState([Autos.autos[0], Autos.autos[1], Autos.autos[2]]);
+    const [carros, setCarros] = useState(JSON.parse(localStorage.getItem('misFavoritos')));
 
     function removeObjectWithId(arr, id) {
         // Making a copy with the Array from() method
@@ -22,6 +22,9 @@ function Favorites() {
         const objWithIdIndex = arrCopy.findIndex((obj) => obj.id === id);
         arrCopy.splice(objWithIdIndex, 1);
         setCarros(arrCopy);
+        //local storage delete record
+        var fav = JSON.parse(localStorage.getItem('misFavoritos'));
+        localStorage.setItem('misFavoritos', JSON.stringify(fav.filter(user => user.id !== id)));
         return arrCopy;
     }
 
@@ -61,7 +64,7 @@ function Favorites() {
 
                                             <td>
                                                 <InputGroup className="mb-3">
-                                                    <img alt="Favoritos" title="Favoritos" src="/react-example/Images/Fav.png" width={45} style={{ paddingLeft: "15px" }} onClick={() => {
+                                                    <img alt="Favoritos" title="Favoritos" src="/react-example/Images/fav_eliminar.png" width={45} style={{ paddingLeft: "15px",cursor:"pointer" }} onClick={() => {
                                                         console.log("HoLa" + producto.modelo);
                                                         let car = carros.find(carro => carro.modelo === producto.modelo);
                                                         console.log(car);
