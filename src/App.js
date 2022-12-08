@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useEffect, useState } from 'react';
+import React, {useState } from 'react';
 import Navigation from "./Navigation";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -29,6 +29,11 @@ function App() {
             var carrito=[Autos.autos[8]];
             localStorage.setItem('miCarrito',JSON.stringify(carrito));
             sessionStorage.setItem('totalPP',0);
+
+            var ordenesCompra=[];
+            const or1={codigo: "PO091287A", fecha:"22-12-2022", precio: 336400,factura:"No", metodo: "PayPal", status: "En proceso", productos:[carrito]};
+            ordenesCompra.push(or1);
+            sessionStorage.setItem('ordenesDeCompra',JSON.stringify(ordenesCompra));
             setStart(true);
         }
     }
