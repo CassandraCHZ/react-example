@@ -8,26 +8,13 @@ export default function POtable() {
 
     const [Ordenes, setOrdenes] = useState(JSON.parse(sessionStorage.getItem('ordenesDeCompra')));
 
-    const [Pedido1, setPedido1] = useState({
-        codigo: "YMTRYU90",
-        fecha: "2022/11/03",
-        precio: 590000,
-        metodo: "Transferencia",
-        estatus: "Entregado",
-        factura: "No"
-    })
+    const [modalOrden,setModalOrden]=useState({});
 
-    const [Pedido2, setPedido2] = useState({
-        codigo: "AATRYU95",
-        fecha: "2022/11/03",
-        precio: 590000,
-        metodo: "Paypal",
-        estatus: "En Proceso",
-        factura: "Sí"
-    })
 
-    const VerDetalles = (e) => {
-        if (e && e.preventDefault()) e.preventDefault();
+
+    function verDetalles(orden){
+        console.log(orden.codigo);
+        setModalOrden(orden);
         alertShow();
     }
 
@@ -44,9 +31,9 @@ export default function POtable() {
                         <th>Código de pedido</th>
                         <th>Fecha</th>
                         <th>Precio Total(MXN)</th>
+                        <th>Factura</th>
                         <th>Método de Pago</th>
                         <th>Estatus</th>
-                        <th>Factura</th>
                         <th>Detalles</th>
                     </tr>
                 </thead>
@@ -60,8 +47,8 @@ export default function POtable() {
                                         <td>{orden.codigo}</td>
                                         <td>{orden.fecha}</td>
                                         <td>{orden.precio}</td>
+                                        <td>{orden.factura}</td>
                                         <td>{orden.metodo}</td>
-
                                         <td>
                                             <div style={{
                                                 background: "#14A44D",
@@ -70,8 +57,7 @@ export default function POtable() {
                                             }}>{orden.estatus}
                                             </div>
                                         </td>
-                                        <td>{orden.factura}</td>
-                                        <td><Button onClick={VerDetalles} variant="link" style={{ color: "blue" }}>Detalles</Button></td>
+                                        <td><Button onClick={() => verDetalles(orden)} variant="link" style={{ color: "blue" }}>Detalles</Button></td>
                                     </tr>
                                 );
                             }
@@ -79,15 +65,15 @@ export default function POtable() {
                     }
                 </tbody>
             </Table>
+
             <Modal size="lg" show={showAlert} onHide={alertClose}>
                 <Modal.Header closeButton style={{
                     background: "#AAB7B8"
                 }} >
-                    <Modal.Title>Detalles del pedido: </Modal.Title>
+                    <Modal.Title>Detalles del pedido: {modalOrden.codigo}</Modal.Title>
                 </Modal.Header>
                 <Modal.Body style={{ background: '#DFE9E9' }}>
-                    <h1>hola</h1>
-
+                    
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="primary" onClick={alertClose}>Cerrar</Button>
