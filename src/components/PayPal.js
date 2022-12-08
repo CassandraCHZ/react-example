@@ -35,7 +35,7 @@ export default function Paypal() {
             var products = JSON.parse(localStorage.getItem("miCarrito"));
 
             const orden = { codigo: generateId, fecha: fechaV, precio: pago.pagan,factura:"No", metodo: "PayPal", estatus: "Completada", productos: [products] };
-            console.log("codigo:" + generateId + " fecha:" + fechaV + " primer producto:" + products[0].modelo + "orden:" + orden.status);
+            console.log("codigo:" + generateId + " fecha:" + fechaV + " primer producto:" + products[0].modelo + "orden:" + orden.estatus);
             var ordenes = JSON.parse(sessionStorage.getItem('ordenesDeCompra'));
             ordenes.push(orden);
             sessionStorage.setItem('ordenesDeCompra', JSON.stringify(ordenes));
