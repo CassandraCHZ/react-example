@@ -31,7 +31,7 @@ function App() {
             sessionStorage.setItem('totalPP',0);
 
             var ordenesCompra=[];
-            const or1={codigo: "PO091287A", fecha:"22-12-2022", precio: 336400,factura:"No", metodo: "PayPal", status: "En proceso", productos:[carrito]};
+            const or1={codigo: "PO091287A", fecha:"22-12-2022", precio: 336400,factura:"No", metodo: "PayPal", estatus: "En proceso", productos:[carrito]};
             ordenesCompra.push(or1);
             sessionStorage.setItem('ordenesDeCompra',JSON.stringify(ordenesCompra));
             setStart(true);
