@@ -14,7 +14,7 @@ function GridComplexExample() {
     nombre: "Andrea Elizabeth",
     apellidoP: "Flores",
     apellidoM: "Padilla",
-    direccion: "av. jose maria chavez",
+    direccion: "av. jose maria chavez #205",
     correo: "andrea@gmail.com",
     
   })
