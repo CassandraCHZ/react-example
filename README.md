@@ -3,6 +3,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 # Proyecto creado para la materia de negocios electronicos.
+ayuda para crear repositorio:https://www.youtube.com/watch?v=M6hBd3Lomvw&list=PL6ARGiZ-yXSroOWnExo_fcSOakIs6URsl&index=5&t=1373s
 creacion del repositorio
 https://github.com/gitname/react-gh-pages
 
