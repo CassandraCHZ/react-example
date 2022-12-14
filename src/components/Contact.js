@@ -33,7 +33,7 @@ const Contact = () => {
                         height="100%"
                         alt='GMAIL'
                         title='GMAIL'
-                        src="/react-example/Images/Contact_image.gif">
+                        src="/react-example/Images/Contact_Image.gif">
                     </img>
                 </Col>
 
