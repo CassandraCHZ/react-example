@@ -17,7 +17,7 @@ export default function Administration() {
            <br></br>
            <br></br>
 
-           <h4 align="center">Tablero</h4>
+           <h4 align="center">Tabler</h4>
 
            <br></br>
 
